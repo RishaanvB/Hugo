@@ -1,0 +1,284 @@
+// variables
+//mainlogo
+$logo-color1: #444444;
+$logo-color2: #9b6e33;
+// navmenu logic
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$duration: 0.2s;
+$distance: 6px;
+// colors
+$background-color: rgb(255, 255, 255);
+$body-font-color: black;
+$header-font-color: white;
+$button-font-color: red;
+$nav-font-color: rgb(7, 7, 7);
+$banner-header-color: black;
+$button-color: #9b6e33;
+$button-hover-color: rgb(224, 187, 19);
+// fonts
+// $header-font:;
+// $text-font:;
+// $button-font:;
+
+.site-container {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.3em;
+  background-color: $background-color;
+}
+
+.header-sticky {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgb(116, 116, 116, 0);
+  box-shadow: 0px 0.8px 14px 0px rgb(116, 116, 116, 0);
+  transition: border-bottom 500ms, box-shadow 500ms;
+}
+.header-border {
+  border-bottom: 1px solid rgb(116, 116, 116, 0.8);
+  box-shadow: 0px 0.8px 14px 0px rgb(116, 116, 116, 0.8);
+  transition: border-bottom 500ms, box-shadow 500ms;
+}
+.header-container {
+  margin: 0px auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+// navbar
+.header-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: auto;
+
+  &__logo {
+    width: 50px;
+  }
+
+  &__name {
+    margin-left: 10px;
+
+    &-title {
+      display: inline-block;
+      font-family: "Catamaran", sans-serif;
+      font-size: x-large;
+      font-weight: 500;
+      color: $logo-color1;
+      opacity: 0.8;
+      text-transform: uppercase;
+    }
+    &-subtitle {
+      font-family: "Catamaran", sans-serif;
+      font-size: xx-large;
+      color: $logo-color2;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 0em;
+    }
+  }
+}
+.header-nav {
+  display: flex;
+  align-items: flex-end;
+  width: 40%;
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    color: $nav-font-color;
+    font-family: "Catamaran", sans-serif;
+    text-transform: uppercase;
+    font-size: xx-small;
+  }
+  &__link {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 1.5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $logo-color2;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
+  }
+}
+.product-container {
+  width: 100%;
+}
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 720px;
+  background-image: url(./Media/Images/phoenix-han-ARCaazwh4xw-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
+  font-family: "Playfair Display", serif;
+}
+
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 45%;
+  color: $body-font-color;
+  text-align: center;
+  background-color: rgba(241, 241, 241, 0.6);
+  padding: 40px 0px;
+  backdrop-filter: blur(2px);
+
+  &__text {
+    font-size: 2.2rem;
+  }
+  &__text > span {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3em;
+    font-style: italic;
+  }
+  &__subtext {
+    font-family: "Catamaran", sans-serif;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    width: 50%;
+  }
+}
+
+.button {
+  font-family: "Catamaran", sans-serif;
+  color: white;
+  background-color: $button-color;
+  padding: 15px 45px;
+  margin-top: 5px;
+  transition: padding 200ms;
+
+  &:hover {
+    color: black;
+    background-color: $button-hover-color;
+  }
+}
+
+.divider {
+  border-top: 1px solid black;
+  width: 30%;
+  margin: 60px auto;
+}
+
+.try-text {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin: 70px auto;
+  font-size: 2.3em;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  column-gap: 70px;
+
+  &__image-container {
+    grid-row: 1fr;
+    grid-column: 1/3;
+
+    & > img {
+      height: 560px;
+    }
+  }
+
+  &__container-info {
+    grid-column: 3/4;
+    margin: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+    margin-bottom: 40px;
+  }
+}
+// product placement right/left
+.product-section:nth-child(even) .product-section__image-container {
+  grid-column: 3/5;
+  grid-row: 1;
+}
+.product-section:nth-child(even) .product-section__container-info {
+  grid-column: 2/3;
+  grid-row: 1;
+}
+
+.btn-product {
+  width: max-content;
+  margin-top: 50px;
+}
+
+.footer {
+  text-align: center;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer > p {
+  font-size: 0.5em;
+}
+
+.socialmedia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.socialmedia > div {
+  margin: 10px;
+}
