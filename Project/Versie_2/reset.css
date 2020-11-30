@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  a,
+  a:hover,
+  a:focus,
+  a:active a:link {
+    text-decoration: none;
+    color: inherit;
+  }
+   
+  /* img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }  */
+  
