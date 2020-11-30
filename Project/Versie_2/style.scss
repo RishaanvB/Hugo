@@ -2,27 +2,25 @@
 
 0. Variables
 1. Header
-    -logo
+    -brand (logo)
     -navbar
+    -hover animation
+    2. hero-section
 
 
     Table of Content  */
 
-// ===Variables====
+// ===Variables START====
 $main-font-color: #554946;
 $hover-animation: all 0.2s ease-in-out;
 
-// navmenu logic
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-$duration: 0.2s;
-$distance: 6px;
-// ===Variables====
+// ===Variables END====
 
-// ===HEADER====
+// ===HEADER START====
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: #554946;
+  color: $main-font-color;
   // background-color: red;
 }
 
@@ -88,7 +86,7 @@ body {
       height: 2px;
       // margin: 5px 0 0;
       transition: $hover-animation;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
       opacity: 1;
       background-color: #554946;
     }
@@ -108,7 +106,7 @@ body {
     }
   }
 }
-// ====Hover-Animation===
+// ====Hover-Animation END===
 
 // ===HEADER END====
 
@@ -121,7 +119,52 @@ body {
 
 .hero-image {
   width: 600px;
+  flex-shrink: 2;
   // border: 1px solid red;
 }
 
-// ===HERO-SECTION====
+.hero-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-left: 10%;
+  padding: 0 0;
+
+  &__header {
+    font-size: 2.3rem;
+    // padding: 100px 0;
+    margin-bottom: 40px;
+
+    // justify-self: flex-start;
+    // align-content: flex-end;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      top: 60px;
+      left: 3px;
+      right: 10%;
+      background-color: $main-font-color;
+    }
+  }
+
+  &__paragraph {
+    max-width: 40ch;
+    margin-bottom: 70px;
+  }
+  &__button {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 15px 35px;
+    width: max-content;
+    background: #9b6e33;
+  }
+  // width: 60%;
+}
+
+// ===HERO-SECTION END====

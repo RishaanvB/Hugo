@@ -2,8 +2,10 @@
 
 0. Variables
 1. Header
-    -logo
+    -brand (logo)
     -navbar
+    -hover animation
+    2. hero-section
 
 
     Table of Content  */
@@ -95,8 +97,8 @@ body {
   height: 2px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   opacity: 1;
   background-color: #554946;
 }
@@ -122,5 +124,57 @@ body {
 
 .hero-image {
   width: 600px;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+}
+
+.hero-banner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-left: 10%;
+  padding: 0 0;
+}
+
+.hero-banner__header {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+.hero-banner__header:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  top: 60px;
+  left: 3px;
+  right: 10%;
+  background-color: #554946;
+}
+
+.hero-banner__paragraph {
+  max-width: 40ch;
+  margin-bottom: 70px;
+}
+
+.hero-banner__button {
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 15px 35px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background: #9b6e33;
 }
 /*# sourceMappingURL=style.css.map */
