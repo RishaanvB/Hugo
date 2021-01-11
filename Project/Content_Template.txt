@@ -27,3 +27,6 @@ fonts: libre baskerville als headers / regular /bold etc
 	montserrat als tekst /light italic
 
 [20:20, 15-11-2020] Hugo De Vries: en kan de website in Nederlands en Engels
+
+colors: 
+25445C
