@@ -168,42 +168,6 @@ $color-sublogo: #818181;
         opacity: 1;
       }
     }
-    /* &::before {
-      content: "";
-      background-color: rgb(39, 31, 6);
-      position: absolute;
-      bottom: -13px;
-      height: 5px;
-      width: 50%;
-      right:50%;
-      // right: 150%;
-
-      // transition: all 0.5s ease-in;
-      opacity: 1;
-    }
-    
-    &::after {
-      content: "";
-      background-color: rgb(39, 31, 6);
-      position: absolute;
-      bottom: -13px;
-      height: 5px;
-      width: 50%;
-      left:50%;
-      // right: 150%;
-
-      // transition: all 0.5s ease-in;
-      opacity: 1;
-    }
-    
-   
-    &:hover {
-      &::before,
-      &::after {
-        // width: 50%;
-        opacity: 0;
-      }
-    } */
   }
 }
 /*  ============HEADER NAV END============= */
