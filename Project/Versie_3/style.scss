@@ -9,17 +9,25 @@
 2. Intro
 3. Sections
 
-  -How to use
+  -How to use 
 
 
 
  */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: white;
+  color: #2b2b28;
+}
+
 $hover-animation: all 0.2s ease-in-out;
 $main-font: "Montserrat", sans-serif;
 $secondary-font: "Baskervville", serif;
+$font-color: #2b2b28;
 $color-blue: #284356;
-$color-brown: #9d560e;
-$color-white: #e2e2e2;
+$color-brown: #7e5920;
+$color-white: #fdfdfd;
 $color-mainlogo: #9b6e33;
 $color-sublogo: #818181;
 // *{
@@ -81,11 +89,6 @@ $color-sublogo: #818181;
   right: 10%;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  background: whitesmoke;
-}
-
 .bg-hero {
   position: relative;
   background-image: url("./Assets/bg-cropped.png");
@@ -95,6 +98,8 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
+/*  ============HEADER NAV START============= */
 
 .header-section {
   display: flex;
@@ -143,43 +148,65 @@ body {
   justify-content: space-between;
 
   &__link {
-    font-size: 1.1rem;
-    font-weight: 500;
-
-    transition: $hover-animation;
     position: relative;
-
-    // ====Hover-Animation START===
-
-    &::before,
-    &::after {
-      content: "";
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    font-weight: 600;
+    &::before {
       position: absolute;
-      bottom: -13px;
-
-      width: 0px;
-      height: 2px;
-      transition: $hover-animation;
-      transition-duration: 0.3s;
-      opacity: 1;
-      background-color: rgb(39, 31, 6);
-    }
-
-    &:after {
-      right: 50%;
-    }
-    &:before {
-      left: 50%;
+      content: "";
+      background: $font-color;
+      height: 4px;
+      width: 100%;
+      left: 0;
+      top: 25px;
+      transition: opacity 0.1s ease-out;
+      opacity: 0;
     }
     &:hover {
-      &:before,
-      &:after {
-        width: 50%;
+      &::before {
         opacity: 1;
       }
     }
+    /* &::before {
+      content: "";
+      background-color: rgb(39, 31, 6);
+      position: absolute;
+      bottom: -13px;
+      height: 5px;
+      width: 50%;
+      right:50%;
+      // right: 150%;
+
+      // transition: all 0.5s ease-in;
+      opacity: 1;
+    }
+    
+    &::after {
+      content: "";
+      background-color: rgb(39, 31, 6);
+      position: absolute;
+      bottom: -13px;
+      height: 5px;
+      width: 50%;
+      left:50%;
+      // right: 150%;
+
+      // transition: all 0.5s ease-in;
+      opacity: 1;
+    }
+    
+   
+    &:hover {
+      &::before,
+      &::after {
+        // width: 50%;
+        opacity: 0;
+      }
+    } */
   }
 }
+/*  ============HEADER NAV END============= */
 
 /*  ============BANNER============= */
 

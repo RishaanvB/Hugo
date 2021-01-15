@@ -9,14 +9,15 @@
 2. Intro
 3. Sections
 
-  -How to use
+  -How to use 
 
 
 
  */
 body {
   font-family: "Montserrat", sans-serif;
-  background: whitesmoke;
+  background: white;
+  color: #2b2b28;
 }
 
 .bg-hero {
@@ -29,6 +30,7 @@ body {
   height: 100vh;
 }
 
+/*  ============HEADER NAV START============= */
 .header-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,40 +102,66 @@ body {
 }
 
 .header-nav__link {
-  font-size: 1.1rem;
-  font-weight: 500;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
   position: relative;
+  font-size: 1.1rem;
+  padding-bottom: 5px;
+  font-weight: 600;
+  /* &::before {
+      content: "";
+      background-color: rgb(39, 31, 6);
+      position: absolute;
+      bottom: -13px;
+      height: 5px;
+      width: 50%;
+      right:50%;
+      // right: 150%;
+
+      // transition: all 0.5s ease-in;
+      opacity: 1;
+    }
+    
+    &::after {
+      content: "";
+      background-color: rgb(39, 31, 6);
+      position: absolute;
+      bottom: -13px;
+      height: 5px;
+      width: 50%;
+      left:50%;
+      // right: 150%;
+
+      // transition: all 0.5s ease-in;
+      opacity: 1;
+    }
+    
+   
+    &:hover {
+      &::before,
+      &::after {
+        // width: 50%;
+        opacity: 0;
+      }
+    } */
 }
 
-.header-nav__link::before, .header-nav__link::after {
-  content: "";
+.header-nav__link::before {
   position: absolute;
-  bottom: -13px;
-  width: 0px;
-  height: 2px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  opacity: 1;
-  background-color: #271f06;
+  content: "";
+  background: #2b2b28;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  top: 25px;
+  -webkit-transition: opacity 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
+  opacity: 0;
 }
 
-.header-nav__link:after {
-  right: 50%;
-}
-
-.header-nav__link:before {
-  left: 50%;
-}
-
-.header-nav__link:hover:before, .header-nav__link:hover:after {
-  width: 50%;
+.header-nav__link:hover::before {
   opacity: 1;
 }
 
+/*  ============HEADER NAV END============= */
 /*  ============BANNER============= */
 .banner {
   position: absolute;
@@ -195,7 +223,7 @@ body {
 /*  ============How it works============= */
 /*  ============How it works -- Intro============= */
 .how-section-intro {
-  background-color: #e2e2e2;
+  background-color: #fdfdfd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,7 +293,7 @@ body {
 
 /*  ============How it works -- Sections============= */
 .howitworks-section {
-  background: #e2e2e2;
+  background: #fdfdfd;
   margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,7 +527,7 @@ body {
   height: 550px;
   margin: 150px auto;
   outline: 2px solid black;
-  color: #e2e2e2;
+  color: #fdfdfd;
 }
 
 .about-us-container__img {
@@ -542,7 +570,7 @@ body {
   width: 110%;
   height: 20%;
   width: 20%;
-  background-color: #e2e2e2;
+  background-color: #fdfdfd;
 }
 
 .about-us-container__text-container p {

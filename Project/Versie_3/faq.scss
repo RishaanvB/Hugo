@@ -1,0 +1,50 @@
+%underline {
+  position: absolute;
+  content: "";
+  background: #4b6c99;
+  opacity: 0.6;
+  bottom: 10%;
+  width: 110%;
+  height: 20%;
+}
+
+$main-font: "Montserrat", sans-serif;
+$secondary-font: "Baskervville", serif;
+$color-blue: #284356;
+$color-brown: #9d560e;
+$color-white: #e2e2e2;
+$color-mainlogo: #9b6e33;
+$color-sublogo: #818181;
+
+.faq-header {
+  font-size: 2.5rem;
+  position: relative;
+  margin: 100px auto;
+  text-align: center;
+  &::before {
+    @extend %underline;
+    width: 30%;
+    height: 25%;
+  }
+}
+
+.faq-container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 80px 50px;
+  background: #efefef;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  &__section {
+    color: $color-blue;
+    & h2 {
+        font-weight: 700;
+      font-size: 1.6rem;
+    }
+    & h3 {
+        font-weight: 400;
+      line-height: 2.3rem;
+    }
+  }
+}
