@@ -1,484 +1,119 @@
-/*     Table of Contents
-    -Header-
-1. Logo
-2. Navbar
-3. Banner
+$blue: #355063;
+$white: whitesmoke;
+$red: #66101f;
+$brown: #554946;
 
- -How it works
-1. Banner
-2. Intro
-3. Sections
-
-  -How to use 
-
-
-
- */
-
+$main-font: "Roboto", sans-serif;
+$secondary-font: "Lora", serif;
 body {
-  font-family: "Montserrat", sans-serif;
-  background: white;
-  color: #2b2b28;
+  background-color: $white;
+  font-family: $main-font;
 }
-
-$hover-animation: all 0.2s ease-in-out;
-$main-font: "Montserrat", sans-serif;
-$secondary-font: "Baskervville", serif;
-$font-color: #2b2b28;
-$color-blue: #284356;
-$color-brown: #7e5920;
-$color-white: #fdfdfd;
-$color-mainlogo: #9b6e33;
-$color-sublogo: #818181;
-// *{
-//   outline: 1px solid red;
-// }
-
-@mixin button-whitebg {
-  border: 1px solid #4a6f9c;
-  padding: 10px 25px;
-  color: #4a6f9c;
-  background-color: white;
-  &:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    background-color: #4a6f9c;
-    color: white;
-  }
-}
-@mixin button-bluebg {
-  border: 1px solid white;
-  color: white;
-  padding: 10px 25px;
-  background-color: #4a6f9c;
-  &:hover {
-    cursor: pointer;
-    border: 1px solid #4a6f9c;
-    background-color: white;
-    color: #4a6f9c;
-  }
-}
-
-@mixin underline {
-  position: absolute;
-  content: "";
-  background: #4b6c99;
-  opacity: 0.6;
-  bottom: 10%;
-  width: 110%;
-  height: 20%;
-}
-
-@mixin sideline-left {
-  position: absolute;
-  content: "";
-  width: 15%;
-  height: 10%;
-  background: black;
-  top: 50%;
-  left: 10%;
-}
-
-@mixin sideline-right {
-  position: absolute;
-  content: "";
-  width: 15%;
-  height: 10%;
-  background: black;
-  top: 50%;
-  right: 10%;
-}
-
-.bg-hero {
+.main-header {
   position: relative;
-  background-image: url("./Assets/bg-cropped.png");
-  background-color: $color-blue;
-  background-repeat: no-repeat;
-  background-position: 330px 20%;
-  background-size: cover;
-  height: 100vh;
-}
-
-/*  ============HEADER NAV START============= */
-
-.header-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: 0px auto;
-}
-/*  ============LOGO============= */
-.header-brand {
-  display: flex;
 
+  padding: 20px 50px;
+  box-shadow: 0px 2px 5px 0px rgba(73, 73, 73, 0.5);
   &__logo {
-    width: 50px;
-    padding-top: 10px;
-  }
-  &__name {
-    align-self: flex-end;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    // padding-bottom: 4px;
-    padding-left: 10px;
-  }
-  &__name-title {
-    color: $color-mainlogo;
-    font-size: 1.5rem;
-  }
-  &__name-subtitle {
-    color: $color-sublogo;
-    font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-  }
-}
-
-/*  ============NAVBAR============= */
-
-.navbar-container {
-  width: 40%;
-  align-self: flex-end;
-}
-
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-
-  &__link {
-    position: relative;
-    font-size: 1.1rem;
-    padding-bottom: 5px;
-    font-weight: 600;
-    &::before {
-      position: absolute;
-      content: "";
-      background: $font-color;
-      height: 4px;
-      width: 100%;
-      left: 0;
-      top: 25px;
-      transition: opacity 0.1s ease-out;
-      opacity: 0;
+    font-family: "Assistant", sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    & :nth-child(1) {
+      color: #5c5655;
     }
-    &:hover {
-      &::before {
-        opacity: 1;
-      }
+    & :nth-child(2) {
+      color: $red;
     }
   }
-}
-/*  ============HEADER NAV END============= */
-
-/*  ============BANNER============= */
-
-.banner {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: #e2e2e2;
-  opacity: 0.8;
-  width: 30%;
-  height: 25%;
-  padding: 50px 100px;
-
-  &__header {
-    position: relative;
-    font-size: 2.8rem;
-    &::before {
-      @include underline;
-    }
-  }
-  &__subheader {
-    font-family: $secondary-font;
-  }
-  &__btn {
-    @include button-whitebg;
-  }
-}
-
-/*  ============How it works============= */
-
-/*  ============How it works -- Intro============= */
-
-.how-section-intro {
-  background-color: $color-white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  margin: 100px 0 auto;
-  padding: 50px 0;
-  text-align: center;
-  width: 100%;
-  height: 300px;
-  &__header {
-    position: relative;
-    width: 30%;
-    &:before {
-      @include sideline-left;
-    }
-    &:after {
-      @include sideline-right;
-    }
-  }
-
-  &__subheader {
-    width: 25%;
-
-    line-height: 1.6rem;
-  }
-
-  &__btn {
-    @include button-bluebg;
-    align-self: center;
-    margin-bottom: -30px;
-  }
-}
-/*  ============How it works -- Sections============= */
-
-.howitworks-section {
-  background: $color-white;
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-around;
-  box-sizing: border-box;
-  // border: 1px solid blue;
-  padding: 100px 0;
-
-  &__text-banner {
-    background-color: #ecedea;
+  &__nav {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30%;
-    height: 250px;
-    outline: 1px solid black;
-    padding: 10px 50px;
-
-    & p {
-      // font-family: $secondary-font;
-      width: 70%;
-      line-height: 1.5rem;
-    }
-    & h2 {
-      font-size: 2.5rem;
-      position: relative;
-      &::before {
-        position: absolute;
-        content: "";
-        background: #4b6c99;
-        opacity: 0.6;
-        bottom: 10%;
-        width: 20%;
-        height: 20%;
-      }
-      &::after {
-        position: absolute;
-        content: "1.";
-        right: 10px;
+    justify-content: center;
+    align-items: center;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $brown;
+      font-weight: 500;
+      & .nav-link {
+        padding: 0 10px;
+        transition: transform 0.2s ease;
+        &:hover {
+          color: #1f1c1b;
+          // transform: scale(1.2);
+        }
       }
     }
   }
-  &__img {
-    position: relative;
-    width: 30%;
-    margin-right: 30px;
-    &::before {
-      position: absolute;
-      content: "";
-      background: black;
-      width: 12%;
-      height: 4px;
-      left: 50%;
-      top: 2.8%;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      background: black;
-      width: 12%;
-      height: 4px;
-      left: 50%;
-      bottom: 2.8%;
-    }
-  }
-  &__img img {
-    background: whitesmoke;
-    width: 100%;
-    padding: 35px 30px;
+}
+#hamburger {
+  display: none;
+  font-size: 2.5rem;
+  margin-right: 40px;
+}
+a.nav-shop-btn.btn {
+  padding: 0.5em 1.8em;
+  color: $white;
+  margin-left: 10px;
+  background: $brown;
+  border: 2px solid $brown;
+  transition: all 0.2s ease-in;
+  &:hover {
+    background: $white;
+    color: $brown;
   }
 }
 
-.howitworks-section:nth-child(odd) {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background: $color-blue;
-    width: 30px;
-    top: 100px;
-    bottom: 100px;
-    left: 0;
-  }
-}
-.howitworks-section:nth-child(even) {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background: $color-blue;
-
-    width: 30px;
-    top: 100px;
-    bottom: 100px;
-    right: 0;
-  }
-}
-
-.howitworks-section:nth-child(2) {
+.hero-banner {
   display: flex;
-  flex-direction: row-reverse;
-}
-.howitworks-section:nth-child(2) {
-  & h2 {
-    &::after {
-      content: "2.";
-    }
+  & > * {
+    height: 100vh;
   }
-}
-
-.howitworks-section:nth-child(3) {
-  & h2 {
-    &::after {
-      content: "3.";
-    }
+  &__left-bg {
+    width: 35vw;
+    background-color: $blue;
   }
-}
-
-/*  ============How to use============= */
-
-.how-to-use-container {
-  display: flex;
-  justify-content: center;
-  margin: 100px auto;
-  text-align: center;
-}
-.how-to-use-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 30px;
-  width: 30%;
-  height: 600px;
-
-  & h1 {
-    position: relative;
-    font-size: 2.5rem;
-    &::before {
-      @include underline;
-      width: 40%;
-    }
-  }
-  & p {
-    font-family: $secondary-font;
-    width: 60%;
-    margin: 0 auto;
+  &__right-bg {
+    width: 65vw;
   }
   & img {
-    height: 400px;
-    outline: 2px solid white;
-    outline-offset: -10px;
-  }
-}
-.blue-bar {
-  width: 100%;
-  height: 100px;
-  background: $color-blue;
-}
-
-/*  ============About us============= */
-
-.about-us {
-  text-align: center;
-  position: relative;
-  width: 30%;
-  margin: 100px auto;
-  &:before {
-    @include sideline-left;
-  }
-  &:after {
-    @include sideline-right;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
-.about-us-container {
-  display: flex;
-  justify-content: center;
-  width: 60%;
-  height: 550px;
-  margin: 150px auto;
-  outline: 2px solid black;
-  color: $color-white;
-  &__img {
-    background-image: url(./Assets/dog.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 10%;
-    width: 50%;
+@media (max-width: 1140px) {
+  #hamburger {
+    display: block;
+    &:hover {
+      cursor: pointer;
+    }
   }
-  &__text-container {
-    display: flex;
+  .main-header__nav__list.active {
+    width: 65%;
+  }
+  .main-header__nav__list {
+    position: fixed;
+    z-index: 0;
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color: $color-blue;
-    padding-left: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    width: 50%;
-    & h2 {
-      position: relative;
-      &::before {
-        @include underline;
-        width: 20%;
-        background-color: $color-white;
+    right: 0%;
+    width: 0%;
+    top: 7%;
+    transition: width 0.3s ease-in;
+    background-color: $white;
+    & .nav-link {
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      white-space: nowrap;
+      &:hover {
+        background-color: rgb(228, 228, 228);
       }
-      font-size: 1.8rem;
-    }
-    & p {
-      font-family: $secondary-font;
-      letter-spacing: 1.5px;
-      width: 60%;
-      line-height: 1.4rem;
     }
   }
-}
-
-/*  ============Footer============= */
-
-.footer {
-  height: 300px;
-  background: $color-blue;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  &__logo {
-    width: 40px;
-  }
-  &__socials {
-    color: whitesmoke;
-    display: flex;
-    width: 500px;
-    justify-content: space-evenly;
-  }
-}
-.social:hover {
-  cursor: pointer;
-  opacity: 0.7;
 }

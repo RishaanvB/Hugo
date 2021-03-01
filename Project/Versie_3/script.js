@@ -1,6 +1,15 @@
 const question = Array.from(document.querySelectorAll(".question-collapsable"));
 const galleryImg = Array.from(document.querySelectorAll(".image"));
+const hamburgerMenu = document.querySelector("#hamburger")
 
+
+
+// Hamburger menu 
+hamburgerMenu.addEventListener("click", ()=>{
+   console.log("clicked");
+   const navList = document.querySelector(".main-header__nav__list")
+   navList.classList.toggle("active")
+})
 
 // collapses answers in faq.html
 question.forEach(question => {
