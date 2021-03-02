@@ -1,14 +1,25 @@
 const question = Array.from(document.querySelectorAll(".question-collapsable"));
 const galleryImg = Array.from(document.querySelectorAll(".image"));
-const hamburgerMenu = document.querySelector("#hamburger")
+const toggleMenu = document.querySelector(".toggle-menu")
 
 
 
 // Hamburger menu 
-hamburgerMenu.addEventListener("click", ()=>{
+// toggleMenu.addEventListener("click", ()=>{
+//    console.log("clicked");
+//    const navList = document.querySelector(".navbar__links")
+//    navList.classList.toggle("menu-open")
+//    // console.log(navList);
+//    // const navList = document.querySelector(".main-header__nav__list")
+//    // navList.classList.toggle("active")
+// })
+
+
+toggleMenu.addEventListener("click", ()=>{
    console.log("clicked");
-   const navList = document.querySelector(".main-header__nav__list")
-   navList.classList.toggle("active")
+   const navList = document.querySelector(".navbar__links")
+      navList.classList.toggle("menu-open")
+
 })
 
 // collapses answers in faq.html

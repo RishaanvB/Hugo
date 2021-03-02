@@ -1,0 +1,68 @@
+$blue: #355063;
+$white: whitesmoke;
+$red: #66101f;
+$brown: #3f2627;
+$main-font: "Roboto", sans-serif;
+$secondary-font: "Lora", serif;
+
+@media (max-width: 460px) {
+  .navbar__logo {
+    font-size: 1rem;
+  }
+  .navbar {
+    padding: 10px 10px;
+  }
+  .toggle-menu.fa-bars {
+    font-size: 1.3rem;
+    right: 10px;
+  }
+  a.nav-shop-btn.btn {
+    font-size: 0.6rem;
+    right: 40px;
+    top: 9px;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+  .navbar__links.menu-open {
+    height: 230px;
+  }
+
+  // ====================hero image landing page=====================
+
+  .hero-banner {
+    &__left-bg {
+      & h1 {
+        font-size: 2rem;
+
+        & h3 {
+          font-size: 0.7rem;
+        }
+        & button {
+          font-size: 0.6rem;
+          margin: 0 0;
+        }
+      }
+    }
+  }
+  // ============how it grows================
+
+  .how-it-grows-container {
+    & h1 {
+      font-size: 1.2rem;
+      width: 90%;
+      &::before {
+        width: 15%;
+        left: 0;
+      }
+      &::after {
+        width: 15%;
+        right: 0;
+      }
+    }
+    & p {
+      font-size: 0.8rem;
+      width: 90%;
+    }
+  }
+}

@@ -1,21 +1,29 @@
 $blue: #355063;
 $white: whitesmoke;
 $red: #66101f;
-$brown: #554946;
-
+$brown: #3f2627;
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
+
+@mixin btn {
+  padding: 1em 1.5em;
+}
 body {
   background-color: $white;
   font-family: $main-font;
+  color: $brown;
 }
-.main-header {
+
+// =====================navigation menu=====================
+
+.navbar {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 20px 50px;
+  background: white;
+  padding: 20px 30px;
   box-shadow: 0px 2px 5px 0px rgba(73, 73, 73, 0.5);
   &__logo {
     display: flex;
@@ -29,31 +37,37 @@ body {
       color: $red;
     }
   }
-  &__nav {
+  &__links {
     display: flex;
     justify-content: center;
     align-items: center;
-    &__list {
+    margin-left: auto;
+    & ul {
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: $brown;
       font-weight: 500;
-      & .nav-link {
+      width: 100%;
+      & li {
+        display: block;
+        height: 100%;
         padding: 0 10px;
         transition: transform 0.2s ease;
         &:hover {
-          color: #1f1c1b;
-          // transform: scale(1.2);
+          color: #a7600c;
+          transform: scale(1.2);
         }
       }
     }
   }
 }
-#hamburger {
+.toggle-menu.fa-bars {
   display: none;
+  position: absolute;
+  right: 20px;
   font-size: 2.5rem;
-  margin-right: 40px;
+  color: $brown;
 }
 a.nav-shop-btn.btn {
   padding: 0.5em 1.8em;
@@ -68,14 +82,59 @@ a.nav-shop-btn.btn {
   }
 }
 
+// ====================hero image landing page=====================
 .hero-banner {
   display: flex;
   & > * {
     height: 100vh;
   }
   &__left-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 35vw;
     background-color: $blue;
+    & h1 {
+      margin-top: -60px;
+      color: $white;
+      font-size: 3.5rem;
+      padding: 1rem 30px 1rem 30px;
+      text-shadow: 5px 4px 4px rgba(27, 26, 26, 0.76);
+      font-weight: 500;
+    }
+    & h3.now-is-your-chance {
+      font-family: $secondary-font;
+      color: $white;
+      padding: 1rem 30px 0.1rem 30px;
+      font-weight: 200;
+    }
+    & h3 {
+      font-family: $secondary-font;
+      color: $white;
+      font-weight: 200;
+      padding: 0.1rem 50px 1rem 30px;
+      line-height: 1.7em;
+      width: 80%;
+    }
+    & button {
+      @include btn;
+      align-self: flex-start;
+      border: none;
+      border: 2px solid $brown;
+      background: $brown;
+      font-size: 1.2rem;
+      margin-top: 15px;
+      margin-left: 30px;
+      font-weight: 500;
+      color: $white;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        background: $white;
+        color: $brown;
+        cursor: pointer;
+      }
+    }
   }
   &__right-bg {
     width: 65vw;
@@ -87,33 +146,48 @@ a.nav-shop-btn.btn {
   }
 }
 
-@media (max-width: 1140px) {
-  #hamburger {
-    display: block;
-    &:hover {
-      cursor: pointer;
+// <!-- ====HOW IT GROWS START==== -->
+
+.how-it-grows-container {
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px 0 ;
+
+  & h1 {
+    color:$red;
+    margin: 0 auto;
+    width: 30%;
+    position: relative;
+    z-index: 99;
+    text-transform: uppercase;
+    font-weight: 500;
+    &::before {
+      position: absolute;
+      z-index: 2;
+      background: $brown;
+      content: "";
+      width: 20%;
+      height: 2px;
+      left: 0;
+      top:50%;
+      transform:translateY(-50%)
+    }
+    &::after {
+      position: absolute;
+      z-index: 2;
+      background: $brown;
+      content: "";
+      width: 20%;
+      height: 2px;
+      right: 0;
+      top:50%;
+      transform:translateY(-50%)
     }
   }
-  .main-header__nav__list.active {
-    width: 65%;
-  }
-  .main-header__nav__list {
-    position: fixed;
-    z-index: 0;
-    flex-direction: column;
-    right: 0%;
-    width: 0%;
-    top: 7%;
-    transition: width 0.3s ease-in;
-    background-color: $white;
-    & .nav-link {
-      width: 100%;
-      padding: 15px 0;
-      text-align: center;
-      white-space: nowrap;
-      &:hover {
-        background-color: rgb(228, 228, 228);
-      }
-    }
+  & p{
+    font-family: $secondary-font;
+    width:30%;
+    margin: 20px auto;
+    line-height: 1.5rem;
   }
 }

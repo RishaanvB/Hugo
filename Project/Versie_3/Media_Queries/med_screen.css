@@ -1,0 +1,120 @@
+@media (max-width: 1140px) {
+  .toggle-menu.fa-bars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .toggle-menu.fa-bars:hover {
+    cursor: pointer;
+  }
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .navbar__links {
+    overflow: hidden;
+    opacity: 0;
+    margin: 0 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 0;
+    -webkit-transition: opacity 0.5s ease, height 0.2s ease-in;
+    transition: opacity 0.5s ease, height 0.2s ease-in;
+  }
+  .navbar__links.menu-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 270px;
+    opacity: 1;
+  }
+  .navbar__links ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .navbar__links ul li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__links ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  a.nav-shop-btn.btn {
+    position: absolute;
+    top: 24px;
+    right: 80px;
+    padding: 0.3em 1.5em;
+  }
+  .hero-banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-banner > * {
+    width: 100%;
+  }
+  .hero-banner__left-bg {
+    height: 35vh;
+  }
+  .hero-banner__left-bg h1 {
+    font-size: 2.5rem;
+    margin-top: -30px;
+  }
+  .hero-banner__left-bg h3 {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .hero-banner__left-bg button {
+    font-size: 0.8rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0 0;
+  }
+  .hero-banner__right-bg {
+    height: 55vh;
+  }
+  .how-it-grows-container h1 {
+    width: 50%;
+  }
+  .how-it-grows-container h1::before {
+    width: 25%;
+    left: 0;
+  }
+  .how-it-grows-container h1::after {
+    width: 25%;
+    right: 0;
+  }
+  .how-it-grows-container p {
+    width: 50%;
+    margin: 20px auto;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .how-it-grows-container h1 {
+    width: 80%;
+  }
+  .how-it-grows-container p {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=med_screen.css.map */

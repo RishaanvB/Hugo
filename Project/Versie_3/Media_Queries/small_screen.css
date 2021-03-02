@@ -1,0 +1,50 @@
+@media (max-width: 460px) {
+  .navbar__logo {
+    font-size: 1rem;
+  }
+  .navbar {
+    padding: 10px 10px;
+  }
+  .toggle-menu.fa-bars {
+    font-size: 1.3rem;
+    right: 10px;
+  }
+  a.nav-shop-btn.btn {
+    font-size: 0.6rem;
+    right: 40px;
+    top: 9px;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+  .navbar__links.menu-open {
+    height: 230px;
+  }
+  .hero-banner__left-bg h1 {
+    font-size: 2rem;
+  }
+  .hero-banner__left-bg h1 h3 {
+    font-size: 0.7rem;
+  }
+  .hero-banner__left-bg h1 button {
+    font-size: 0.6rem;
+    margin: 0 0;
+  }
+  .how-it-grows-container h1 {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  .how-it-grows-container h1::before {
+    width: 15%;
+    left: 0;
+  }
+  .how-it-grows-container h1::after {
+    width: 15%;
+    right: 0;
+  }
+  .how-it-grows-container p {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=small_screen.css.map */

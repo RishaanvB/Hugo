@@ -35,6 +35,9 @@
     />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./Media_Queries/med_screen.css" />
+    <link rel="stylesheet" href="./Media_Queries/small_screen.css" />
+
     <link
       rel="shortcut icon"
       href="./Assets/paddostoel_bruin_icoon.ico"
@@ -47,18 +50,19 @@
     <script defer src="./script.js"></script>
   </head>
 
-  <!-- ====LOGO==== -->
-
   <body>
-    <header class="main-header">
-      <div class="main-header__logo">
+    
+    <!-- ====LOGO==== -->
+    <nav class="navbar">
+      <div class="navbar__logo">
         <span>Mushroom</span>
         <span>Fruit</span>
       </div>
+      <i class="fas fa-bars toggle-menu"></i>
+      <!-- ====NAVBAR==== -->
 
-      <nav class="main-header__nav">
-        <i class="fas fa-bars hamburger" id="hamburger"></i>
-        <ul class="main-header__nav__list">
+      <nav class="navbar__links">
+        <ul class="navbar__links__list">
           <li class="nav-link"><a href="#">Home</a></li>
           <li class="nav-link"><a href="#">How it grows</a></li>
           <li class="nav-link"><a href="#">Consuming reishi</a></li>
@@ -67,18 +71,18 @@
           <li class="nav-link"><a href="#">About me</a></li>
           <li class="nav-link"><a href="#">Contact</a></li>
         </ul>
-        <li>
-          <a class="nav-shop-btn btn" href="#">Shop</a>
-        </li>
       </nav>
-    </header>
+      <a class="nav-shop-btn btn" href="#">Shop</a>
+    </nav>
+    <!-- ====HERO IMAGE==== -->
 
     <div class="hero-banner">
       <div class="hero-banner__left-bg">
-        <h1>Ever grown a Reishi mushroom?</h1>
+        <h1>Ever grown a Reishi mushroom ?</h1>
+        <h3 class="now-is-your-chance">Now is your chance!</h3>
         <h3>
-          Now is your chance! With the Reishi Growkit from Mushroomfruit,
-          growing indoors has never been easier!
+          With the Reishi Growkit from Mushroomfruit, growing indoors has never
+          been easier!
         </h3>
         <button class="hero-banner__left-bg__btn btn">Go to Shop</button>
       </div>
@@ -86,5 +90,16 @@
         <img src="./Assets/bg-hero-landingpage.jpg" alt="" />
       </div>
     </div>
+    <!-- ====HOW IT GROWS START==== -->
+    <section class="how-it-grows-container">
+      <h1>how it grows</h1>
+      <p>
+        This is how easy growing a reishi is. Just sit back and relax. It’s even
+        easier than growing weed. voluptatum deleniti atque corrupti quos
+        dolores et quas molestiausamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestia
+      </p>
+    </section>
   </body>
 </html>
