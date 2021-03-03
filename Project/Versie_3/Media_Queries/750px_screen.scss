@@ -1,0 +1,117 @@
+// ==================750px screen=================
+$blue: #2c4353;
+$white: whitesmoke;
+$red: #66101f;
+$brown: #3f2627;
+$grey: #cccccc;
+$main-font: "Roboto", sans-serif;
+$secondary-font: "Lora", serif;
+$transition-speed: 2s;
+@mixin btn {
+  padding: 1em 1.5em;
+}
+@mixin fade-onscroll {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(20px);
+}
+@mixin fade-onload {
+  opacity: 0;
+  transition: opacity $transition-speed ease;
+}
+@mixin fade-navbar {
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: all 1.3s ease-out 0.3s;
+}
+@media (max-width: 750px) {
+  .how-it-grows-container {
+    & h1 {
+      width: 80%;
+    }
+    & p {
+      width: 80%;
+    }
+  }
+
+  // HOW IT GROWS PHASES
+  .phase-one {
+    background-image: url("https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg");
+    & .phases__text-header {
+      background-color: white;
+      color: $blue;
+      & h1 {
+        border-bottom: 4px solid $blue;
+      }
+    }
+  }
+  .phase-two {
+    background-image: url("https://images.pexels.com/photos/247409/pexels-photo-247409.jpeg?cs=srgb&dl=pexels-pixabay-247409.jpg&fm=jpg");
+    & .phases__text-header {
+      background-color: $blue;
+      color: $grey;
+      & h1 {
+        border-bottom: 4px solid $grey;
+      }
+    }
+  }
+  .phase-three {
+    background-image: url("https://images.pexels.com/photos/210808/pexels-photo-210808.jpeg?cs=srgb&dl=pexels-anton-atanasov-210808.jpg&fm=jpg");
+    & .phases__text-header {
+      background-color: $grey;
+      color: $brown;
+      & h1 {
+        border-bottom: 4px solid $brown;
+      }
+    }
+  }
+  .phases {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    flex-direction: column-reverse;
+    margin-bottom: 250px;
+
+    &__text-header {
+      position: absolute;
+    //   z-index: 1;
+      //   margin-bottom: -100px;
+      bottom: -170px;
+      border: none;
+      text-align: center;
+    //   height: 260px;
+      width: 80%;
+     
+        height: max-content;
+
+      & h1 {
+        // background: white;
+        // margin: 10px 0;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 15px 0;
+        width: 50%;
+        margin: 0 auto;
+        white-space: nowrap;
+        border-bottom: 4px solid $blue;
+      }
+      & p {
+        width: 100%;
+        max-width: 350px;
+        min-width: 200px;
+        margin: 20px auto;
+        padding: 10px 10px;
+        // background-color: white;
+      }
+    }
+    &__img-container {
+      display: none;
+      //   z-index: 0;
+      //   padding: 40% 50%;
+      //   object-fit: cover;
+    }
+  }
+}

@@ -1,8 +1,11 @@
 @media (max-width: 1140px) {
   .toggle-menu.fa-bars {
+    font-size: 2.1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-transition: top 1.3s ease-out 0.3s;
+    transition: top 1.3s ease-out 0.3s;
   }
   .toggle-menu.fa-bars:hover {
     cursor: pointer;
@@ -56,9 +59,11 @@
   }
   a.nav-shop-btn.btn {
     position: absolute;
-    top: 24px;
+    top: 20px;
     right: 80px;
     padding: 0.3em 1.5em;
+    -webkit-transition: top 1.3s ease-out 0.3s;
+    transition: top 1.3s ease-out 0.3s;
   }
   .hero-banner {
     -webkit-box-orient: vertical;
@@ -107,14 +112,11 @@
     margin: 20px auto;
     line-height: 1.5rem;
   }
-}
-
-@media (max-width: 750px) {
-  .how-it-grows-container h1 {
-    width: 80%;
+  .phases {
+    padding: 30px 10%;
   }
-  .how-it-grows-container p {
-    width: 80%;
+  .phases__text-header p {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=med_screen.css.map */

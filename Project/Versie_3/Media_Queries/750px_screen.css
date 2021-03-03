@@ -1,0 +1,81 @@
+@media (max-width: 750px) {
+  .how-it-grows-container h1 {
+    width: 80%;
+  }
+  .how-it-grows-container p {
+    width: 80%;
+  }
+  .phase-one {
+    background-image: url("https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg");
+  }
+  .phase-one .phases__text-header {
+    background-color: white;
+    color: #2c4353;
+  }
+  .phase-one .phases__text-header h1 {
+    border-bottom: 4px solid #2c4353;
+  }
+  .phase-two {
+    background-image: url("https://images.pexels.com/photos/247409/pexels-photo-247409.jpeg?cs=srgb&dl=pexels-pixabay-247409.jpg&fm=jpg");
+  }
+  .phase-two .phases__text-header {
+    background-color: #2c4353;
+    color: #cccccc;
+  }
+  .phase-two .phases__text-header h1 {
+    border-bottom: 4px solid #cccccc;
+  }
+  .phase-three {
+    background-image: url("https://images.pexels.com/photos/210808/pexels-photo-210808.jpeg?cs=srgb&dl=pexels-anton-atanasov-210808.jpg&fm=jpg");
+  }
+  .phase-three .phases__text-header {
+    background-color: #cccccc;
+    color: #3f2627;
+  }
+  .phase-three .phases__text-header h1 {
+    border-bottom: 4px solid #3f2627;
+  }
+  .phases {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 250px;
+  }
+  .phases__text-header {
+    position: absolute;
+    bottom: -170px;
+    border: none;
+    text-align: center;
+    width: 80%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .phases__text-header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 15px 0;
+    width: 50%;
+    margin: 0 auto;
+    white-space: nowrap;
+    border-bottom: 4px solid #2c4353;
+  }
+  .phases__text-header p {
+    width: 100%;
+    max-width: 350px;
+    min-width: 200px;
+    margin: 20px auto;
+    padding: 10px 10px;
+  }
+  .phases__img-container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=750px_screen.css.map */

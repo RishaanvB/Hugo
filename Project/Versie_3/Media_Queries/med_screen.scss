@@ -1,15 +1,36 @@
-$blue: #355063;
+$blue: #2c4353;
 $white: whitesmoke;
 $red: #66101f;
 $brown: #3f2627;
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
+$transition-speed: 2s;
+@mixin btn {
+  padding: 1em 1.5em;
+}
+@mixin fade-onscroll {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(20px);
+}
+@mixin fade-onload {
+  opacity: 0;
+  transition: opacity $transition-speed ease;
+}
+@mixin fade-navbar {
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: all 1.3s ease-out 0.3s;
+}
 
 @media (max-width: 1140px) {
   // =====================navigation menu=====================
 
   .toggle-menu.fa-bars {
+    font-size: 2.1rem;
     display: flex;
+    transition: top 1.3s ease-out 0.3s;
+
     &:hover {
       cursor: pointer;
     }
@@ -52,9 +73,10 @@ $secondary-font: "Lora", serif;
 
   a.nav-shop-btn.btn {
     position: absolute;
-    top: 24px;
+    top: 20px;
     right: 80px;
     padding: 0.3em 1.5em;
+    transition: top 1.3s ease-out 0.3s;
   }
 
   // ====================hero image landing page=====================
@@ -88,8 +110,6 @@ $secondary-font: "Lora", serif;
   }
   // HOW IT GROWS CONTAINER
   .how-it-grows-container {
-   
-
     & h1 {
       width: 50%;
       &::before {
@@ -107,21 +127,52 @@ $secondary-font: "Lora", serif;
       line-height: 1.5rem;
     }
   }
-}
 
-// ==================750px screen=================
-@media (max-width: 750px) {
-  .how-it-grows-container {
-   
+  // phase one how it grows
+  .phases {
+    // justify-content: center;
+    // align-items: center;
+    // background-color: white;
+    padding: 30px 10%;
+    // margin: -20px auto;
+    &__text-header {
+      // @include fade-onscroll;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      // align-self: flex-start;
+      // height: 230px;
+      // border-left: 20px solid $blue;
+      // padding: 5px 20px;
+      // & h1 {
+      // text-transform: uppercase;
+      // font-weight: 500;
+      // }
+      & p {
+        // font-family: $secondary-font;
+        width: 70%;
+      }
+    }
 
-    & h1 {
-      width: 80%;
-    
-    }
-    & p {
-      width: 80%;
-    
-    }
+    // &__img-container {
+    //   @include fade-onscroll;
+
+    //   overflow: hidden;
+    //   height: 0;
+    //   padding: 20% 20%;
+    //   position: relative;
+
+    //   & img {
+    //     display: block;
+    //     min-width: 150%;
+    //     min-height: 100%;
+    //     max-width: 100%;
+    //     max-height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     object-fit: cover;
+    //   }
+    // }
   }
-
 }

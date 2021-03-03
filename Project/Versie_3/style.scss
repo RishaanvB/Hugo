@@ -1,12 +1,27 @@
-$blue: #355063;
+$blue: #2c4353;
 $white: whitesmoke;
 $red: #66101f;
 $brown: #3f2627;
+$grey: #CCCCCC;
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
-
+$transition-speed: 2s;
 @mixin btn {
   padding: 1em 1.5em;
+}
+@mixin fade-onscroll {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(20px);
+}
+@mixin fade-onload {
+  opacity: 0;
+  transition: opacity $transition-speed ease;
+}
+@mixin fade-navbar {
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: all 1.3s ease-out 0.3s;
 }
 body {
   background-color: $white;
@@ -15,10 +30,15 @@ body {
 }
 
 // =====================navigation menu=====================
-
+.navbar.navbar-animate-onload {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .navbar {
-  position: relative;
-  z-index: 1;
+  @include fade-navbar;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,16 +86,17 @@ body {
   display: none;
   position: absolute;
   right: 20px;
+  top: 20px;
   font-size: 2.5rem;
   color: $brown;
 }
 a.nav-shop-btn.btn {
-  padding: 0.5em 1.8em;
+  padding: 0.2em 1.3em;
   color: $white;
   margin-left: 10px;
   background: $brown;
   border: 2px solid $brown;
-  transition: all 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in, top $transition-speed ease .3s;
   &:hover {
     background: $white;
     color: $brown;
@@ -83,6 +104,12 @@ a.nav-shop-btn.btn {
 }
 
 // ====================hero image landing page=====================
+.onload {
+  @include fade-onload;
+}
+.onload.fade-onload {
+  opacity: 1;
+}
 .hero-banner {
   display: flex;
   & > * {
@@ -101,7 +128,9 @@ a.nav-shop-btn.btn {
       padding: 1rem 30px 1rem 30px;
       text-shadow: 5px 4px 4px rgba(27, 26, 26, 0.76);
       font-weight: 500;
+
     }
+   
     & h3.now-is-your-chance {
       font-family: $secondary-font;
       color: $white;
@@ -127,7 +156,7 @@ a.nav-shop-btn.btn {
       margin-left: 30px;
       font-weight: 500;
       color: $white;
-      transition: all 0.2s ease-in;
+      transition: background-color 0.2s ease-in, color .2s ease-in, opacity $transition-speed ease;
 
       &:hover {
         background: $white;
@@ -137,6 +166,7 @@ a.nav-shop-btn.btn {
     }
   }
   &__right-bg {
+    background-color: #ccd1d4;
     width: 65vw;
   }
   & img {
@@ -151,10 +181,10 @@ a.nav-shop-btn.btn {
 .how-it-grows-container {
   margin: 30px auto;
   text-align: center;
-  padding: 20px 0 ;
+  padding: 20px 0;
 
   & h1 {
-    color:$red;
+    color: $red;
     margin: 0 auto;
     width: 30%;
     position: relative;
@@ -169,8 +199,8 @@ a.nav-shop-btn.btn {
       width: 20%;
       height: 2px;
       left: 0;
-      top:50%;
-      transform:translateY(-50%)
+      top: 50%;
+      transform: translateY(-50%);
     }
     &::after {
       position: absolute;
@@ -180,14 +210,68 @@ a.nav-shop-btn.btn {
       width: 20%;
       height: 2px;
       right: 0;
-      top:50%;
-      transform:translateY(-50%)
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
-  & p{
+  & p {
     font-family: $secondary-font;
-    width:30%;
+    width: 30%;
     margin: 20px auto;
     line-height: 1.5rem;
+  }
+}
+
+// phase one how it grows
+
+.fade-in.fade-onscroll {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.phases {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 70px 20%;
+  margin: -20px auto;
+  &__text-header {
+    @include fade-onscroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    height: 230px;
+    border-left: 20px solid $blue;
+    padding: 5px 20px;
+    & h1 {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    & p {
+      font-family: $secondary-font;
+      width: 50%;
+    }
+  }
+
+  &__img-container {
+    @include fade-onscroll;
+
+    overflow: hidden;
+    height: 0;
+    padding: 20% 20%;
+    position: relative;
+
+    & img {
+      display: block;
+      min-width: 150%;
+      min-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
   }
 }

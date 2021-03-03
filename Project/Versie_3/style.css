@@ -4,9 +4,21 @@ body {
   color: #3f2627;
 }
 
+.navbar.navbar-animate-onload {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 .navbar {
-  position: relative;
-  z-index: 1;
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  opacity: 0;
+  -webkit-transition: all 1.3s ease-out 0.3s;
+  transition: all 1.3s ease-out 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,23 +99,34 @@ body {
   display: none;
   position: absolute;
   right: 20px;
+  top: 20px;
   font-size: 2.5rem;
   color: #3f2627;
 }
 
 a.nav-shop-btn.btn {
-  padding: 0.5em 1.8em;
+  padding: 0.2em 1.3em;
   color: whitesmoke;
   margin-left: 10px;
   background: #3f2627;
   border: 2px solid #3f2627;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in, top 2s ease 0.3s;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in, top 2s ease 0.3s;
 }
 
 a.nav-shop-btn.btn:hover {
   background: whitesmoke;
   color: #3f2627;
+}
+
+.onload {
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+}
+
+.onload.fade-onload {
+  opacity: 1;
 }
 
 .hero-banner {
@@ -128,7 +151,7 @@ a.nav-shop-btn.btn:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 35vw;
-  background-color: #355063;
+  background-color: #2c4353;
 }
 
 .hero-banner__left-bg h1 {
@@ -168,8 +191,8 @@ a.nav-shop-btn.btn:hover {
   margin-left: 30px;
   font-weight: 500;
   color: whitesmoke;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in, opacity 2s ease;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in, opacity 2s ease;
 }
 
 .hero-banner__left-bg button:hover {
@@ -179,6 +202,7 @@ a.nav-shop-btn.btn:hover {
 }
 
 .hero-banner__right-bg {
+  background-color: #ccd1d4;
   width: 65vw;
 }
 
@@ -236,5 +260,88 @@ a.nav-shop-btn.btn:hover {
   width: 30%;
   margin: 20px auto;
   line-height: 1.5rem;
+}
+
+.fade-in.fade-onscroll {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.phases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 70px 20%;
+  margin: -20px auto;
+}
+
+.phases__text-header {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  height: 230px;
+  border-left: 20px solid #2c4353;
+  padding: 5px 20px;
+}
+
+.phases__text-header h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.phases__text-header p {
+  font-family: "Lora", serif;
+  width: 50%;
+}
+
+.phases__img-container {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  overflow: hidden;
+  height: 0;
+  padding: 20% 20%;
+  position: relative;
+}
+
+.phases__img-container img {
+  display: block;
+  min-width: 150%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

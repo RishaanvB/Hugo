@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./Media_Queries/med_screen.css" />
+    <link rel="stylesheet" href="./Media_Queries/750px_screen.css" />
+
     <link rel="stylesheet" href="./Media_Queries/small_screen.css" />
 
     <link
@@ -51,9 +53,8 @@
   </head>
 
   <body>
-    
     <!-- ====LOGO==== -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <div class="navbar__logo">
         <span>Mushroom</span>
         <span>Fruit</span>
@@ -72,34 +73,90 @@
           <li class="nav-link"><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <a class="nav-shop-btn btn" href="#">Shop</a>
+      <a class="nav-shop-btn btn" id="nav-shop-btn" href="#">Shop</a>
     </nav>
     <!-- ====HERO IMAGE==== -->
 
     <div class="hero-banner">
       <div class="hero-banner__left-bg">
-        <h1>Ever grown a Reishi mushroom ?</h1>
-        <h3 class="now-is-your-chance">Now is your chance!</h3>
-        <h3>
+        <h1 class="onload">Ever grown a Reishi mushroom ?</h1>
+        <h3 class="now-is-your-chance onload">Now is your chance!</h3>
+        <h3 class="onload">
           With the Reishi Growkit from Mushroomfruit, growing indoors has never
           been easier!
         </h3>
-        <button class="hero-banner__left-bg__btn btn">Go to Shop</button>
+        <button class="onload hero-banner__left-bg__btn btn">Go to Shop</button>
       </div>
       <div class="hero-banner__right-bg">
-        <img src="./Assets/bg-hero-landingpage.jpg" alt="" />
+        <img class="onload" src="./Assets/bg-hero-landingpage.jpg" alt="" />
       </div>
     </div>
     <!-- ====HOW IT GROWS START==== -->
-    <section class="how-it-grows-container">
-      <h1>how it grows</h1>
-      <p>
-        This is how easy growing a reishi is. Just sit back and relax. It’s even
-        easier than growing weed. voluptatum deleniti atque corrupti quos
-        dolores et quas molestiausamus et iusto odio dignissimos ducimus qui
-        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-        et quas molestia
-      </p>
-    </section>
+    <main>
+      <section class="how-it-grows-container">
+        <h1>how it grows</h1>
+        <p>
+          This is how easy growing a reishi is. Just sit back and relax. It’s
+          even easier than growing weed. voluptatum deleniti atque corrupti quos
+          dolores et quas molestiausamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+          et quas molestia
+        </p>
+      </section>
+
+      <section class=" phases phase-one ">
+        <div class="phases__text-header fade-in">
+          <h1>grow phase one</h1>
+          <p>
+            Error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae abia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntu
+          </p>
+        </div>
+        <div class="phases__img-container fade-in">
+          <img 
+            src="https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg"
+            alt=""
+          />
+        </div>
+      </section>
+
+
+      <section class=" phases phase-two">
+        <div class="phases__text-header fade-in">
+          <h1>grow phase two</h1>
+          <p>
+            Error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae abia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntu
+          </p>
+        </div>
+        <div class="phases__img-container fade-in">
+          <img 
+            src="https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section class=" phases phase-three">
+        <div class="phases__text-header fade-in">
+          <h1>grow phase three</h1>
+          <p>
+            Error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae abia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntu
+          </p>
+        </div>
+        <div class="phases__img-container fade-in">
+          <img 
+            src="https://images.pexels.com/photos/210808/pexels-photo-210808.jpeg?cs=srgb&dl=pexels-anton-atanasov-210808.jpg&fm=jpg"
+            alt=""
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
   </body>
 </html>
