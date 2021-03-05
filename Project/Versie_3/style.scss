@@ -136,6 +136,7 @@ a.nav-shop-btn.btn {
     width: 35vw;
     background-color: $blue;
     & h1 {
+      text-transform: uppercase;
       margin-top: -60px;
       color: $white;
       font-size: 3.5rem;
@@ -509,11 +510,10 @@ a.nav-shop-btn.btn {
   }
 }
 
-
 // footer
 
-footer{
+footer {
   background-color: $blue;
   width: 100vw;
-  height:600px;
+  height: 600px;
 }
