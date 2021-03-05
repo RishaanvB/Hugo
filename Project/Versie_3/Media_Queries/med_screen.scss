@@ -130,49 +130,26 @@ $transition-speed: 2s;
 
   // phase one how it grows
   .phases {
-    // justify-content: center;
-    // align-items: center;
-    // background-color: white;
     padding: 30px 10%;
-    // margin: -20px auto;
+
     &__text-header {
-      // @include fade-onscroll;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: space-between;
-      // align-self: flex-start;
-      // height: 230px;
-      // border-left: 20px solid $blue;
-      // padding: 5px 20px;
-      // & h1 {
-      // text-transform: uppercase;
-      // font-weight: 500;
-      // }
       & p {
-        // font-family: $secondary-font;
         width: 70%;
       }
     }
+  }
 
-    // &__img-container {
-    //   @include fade-onscroll;
+  // benefits
 
-    //   overflow: hidden;
-    //   height: 0;
-    //   padding: 20% 20%;
-    //   position: relative;
-
-    //   & img {
-    //     display: block;
-    //     min-width: 150%;
-    //     min-height: 100%;
-    //     max-width: 100%;
-    //     max-height: 100%;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     object-fit: cover;
-    //   }
-    // }
+  .benefits {
+    padding: 50px 15%;
+    &__categories {
+      padding: 20px 0;
+      flex-direction: column;
+      // margin:40px auto;
+      &__left {
+        margin-bottom: 40px;
+      }
+    }
   }
 }

@@ -2,12 +2,24 @@ $blue: #2c4353;
 $white: whitesmoke;
 $red: #66101f;
 $brown: #3f2627;
-$grey: #CCCCCC;
+$grey: #cccccc;
+$silver: #656565;
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
 $transition-speed: 2s;
-@mixin btn {
+@mixin btn-blue {
+  border: none;
+  border: 2px solid $blue;
   padding: 1em 1.5em;
+  text-transform: uppercase;
+  background-color: $blue;
+  color: $white;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  &:hover {
+    background-color: $white;
+    color: $blue;
+    cursor: pointer;
+  }
 }
 @mixin fade-onscroll {
   opacity: 0;
@@ -24,6 +36,7 @@ $transition-speed: 2s;
   transition: all 1.3s ease-out 0.3s;
 }
 body {
+  // width: 100vw;
   background-color: $white;
   font-family: $main-font;
   color: $brown;
@@ -38,7 +51,7 @@ body {
   @include fade-navbar;
   position: fixed;
   width: 100%;
-  z-index: 10000;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,7 +109,8 @@ a.nav-shop-btn.btn {
   margin-left: 10px;
   background: $brown;
   border: 2px solid $brown;
-  transition: color 0.2s ease-in, background-color 0.2s ease-in, top $transition-speed ease .3s;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in,
+    top $transition-speed ease 0.3s;
   &:hover {
     background: $white;
     color: $brown;
@@ -128,9 +142,8 @@ a.nav-shop-btn.btn {
       padding: 1rem 30px 1rem 30px;
       text-shadow: 5px 4px 4px rgba(27, 26, 26, 0.76);
       font-weight: 500;
-
     }
-   
+
     & h3.now-is-your-chance {
       font-family: $secondary-font;
       color: $white;
@@ -146,7 +159,7 @@ a.nav-shop-btn.btn {
       width: 80%;
     }
     & button {
-      @include btn;
+      @include btn-blue;
       align-self: flex-start;
       border: none;
       border: 2px solid $brown;
@@ -156,7 +169,8 @@ a.nav-shop-btn.btn {
       margin-left: 30px;
       font-weight: 500;
       color: $white;
-      transition: background-color 0.2s ease-in, color .2s ease-in, opacity $transition-speed ease;
+      transition: background-color 0.2s ease-in, color 0.2s ease-in,
+        opacity $transition-speed ease;
 
       &:hover {
         background: $white;
@@ -234,14 +248,14 @@ a.nav-shop-btn.btn {
   align-items: center;
   background-color: white;
   padding: 70px 20%;
-  margin: -20px auto;
+  margin: 0 auto;
   &__text-header {
     @include fade-onscroll;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-self: flex-start;
-    height: 230px;
+    height: max-content;
     border-left: 20px solid $blue;
     padding: 5px 20px;
     & h1 {
@@ -251,6 +265,8 @@ a.nav-shop-btn.btn {
     & p {
       font-family: $secondary-font;
       width: 50%;
+      padding: 15px 0;
+      height: max-content;
     }
   }
 
@@ -274,4 +290,230 @@ a.nav-shop-btn.btn {
       object-fit: cover;
     }
   }
+}
+
+.phase-two {
+  color: $grey;
+  flex-direction: row-reverse;
+  background-color: $blue;
+  text-align: right;
+  & .phases__text-header {
+    border-left: none;
+    border-right: 20px solid $grey;
+    & p {
+      text-align: right;
+      margin-left: auto;
+    }
+  }
+}
+
+.phase-three {
+  background-color: $white;
+  &__guide-text {
+    @include fade-onscroll;
+    color: $blue;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 50px;
+    white-space: nowrap;
+    & .btn {
+      border: none;
+      text-transform: uppercase;
+      color: $white;
+      padding: 0.5em 1em;
+      margin-top: 15px;
+      background-color: $blue;
+      transition: all 0.2s ease-in;
+      font-weight: 600;
+      border: 2px solid $blue;
+      &:hover {
+        cursor: pointer;
+        color: $blue;
+        background-color: $white;
+      }
+    }
+  }
+}
+// divider
+
+.divider {
+  height: 150px;
+  // width: 100vw;
+  background: url("https://images.pexels.com/photos/5273268/pexels-photo-5273268.jpeg?cs=srgb&dl=pexels-julia-volk-5273268.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-top: 15px solid $grey;
+  border-bottom: 15px solid $grey;
+}
+
+// ================REISHI BENEFITS=================
+
+.benefits {
+  background-color: #dadada;
+  padding: 80px 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  &__header {
+    & h1 {
+      color: $blue;
+      margin: 30px auto;
+      width: 100%;
+      position: relative;
+      z-index: 99;
+      text-transform: uppercase;
+      font-weight: 500;
+      &::before {
+        position: absolute;
+        z-index: 2;
+        background: $blue;
+        content: "";
+        width: 10%;
+        height: 2px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::after {
+        position: absolute;
+        z-index: 2;
+        background: $blue;
+        content: "";
+        width: 10%;
+        height: 2px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    & p {
+      padding: 10px 0;
+      color: $silver;
+      font-family: $secondary-font;
+      max-width: 60%;
+
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  &__categories {
+    padding: 60px 0;
+    // margin: 40px auto;
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    & .fas {
+      color: $white;
+      font-size: 3.5rem;
+    }
+    & h2 {
+      padding: 20px 0;
+      font-family: $secondary-font;
+      color: $blue;
+      font-weight: 500;
+    }
+
+    & p {
+      color: $silver;
+      font-family: $secondary-font;
+      // width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  &__btn {
+    @include btn-blue;
+  }
+}
+
+// gallery
+.gallery {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 15px solid $grey;
+  border-bottom: 15px solid $grey;
+  &__header {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $blue;
+    width: 50%;
+    position: relative;
+    z-index: 99;
+    text-transform: uppercase;
+    font-weight: 500;
+    &::before {
+      position: absolute;
+      z-index: 2;
+      background: $blue;
+      content: "";
+      width: 10%;
+      height: 2px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      position: absolute;
+      z-index: 2;
+      background: $blue;
+      content: "";
+      width: 10%;
+      height: 2px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__btn {
+    @include btn-blue;
+  }
+}
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 30px;
+  grid-auto-flow: dense;
+  width: 90%;
+  margin: 40px auto;
+  & picture {
+    overflow: hidden;
+    height: 0;
+    padding: 50% 0;
+    position: relative;
+  }
+  & img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // opacity: 0;
+    transition: opacity 0.4s ease;
+    object-fit: cover;
+  }
+}
+
+
+// footer
+
+footer{
+  background-color: $blue;
+  width: 100vw;
+  height:600px;
 }

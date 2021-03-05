@@ -118,5 +118,18 @@
   .phases__text-header p {
     width: 70%;
   }
+  .benefits {
+    padding: 50px 15%;
+  }
+  .benefits__categories {
+    padding: 20px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .benefits__categories__left {
+    margin-bottom: 40px;
+  }
 }
 /*# sourceMappingURL=med_screen.css.map */

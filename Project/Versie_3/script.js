@@ -1,7 +1,14 @@
 const question = Array.from(document.querySelectorAll(".question-collapsable"));
 const galleryImg = Array.from(document.querySelectorAll(".image"));
 const toggleMenu = document.querySelector(".toggle-menu");
+const fadeElements = document.querySelectorAll(".onload");
+window.addEventListener("scroll", animateImagesOnDisplay);
 
+// animates navbar into view
+const navbar = document.querySelector("#navbar");
+navbar.classList.add("navbar-animate-onload");
+
+// collapse navbar on specified scrollbar pos.
 window.addEventListener("scroll", () => {
   const navBar = document.getElementById("navbar");
   const shopBtn = document.getElementById("nav-shop-btn");
@@ -18,8 +25,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// handles clickable hamburger menu
+toggleMenu.addEventListener("click", () => {
+  const navList = document.querySelector(".navbar__links");
+  navList.classList.toggle("menu-open");
+});
+
+// fading in opacity for landing page
+fadeElements.forEach((element) => element.classList.add("fade-onload"));
+
 // handles animation on scroll for phase section images
-const animateImagesOnDisplay = () => {
+function animateImagesOnDisplay() {
   const scrollTrigger = (window.innerHeight / 100) * 99;
   const elToFadeIn = document.querySelectorAll(".fade-in");
   elToFadeIn.forEach((elToFadeIn) => {
@@ -28,33 +44,10 @@ const animateImagesOnDisplay = () => {
       ? elToFadeIn.classList.add("fade-onscroll")
       : elToFadeIn.classList.remove("fade-onscroll");
   });
-};
-window.addEventListener("scroll", animateImagesOnDisplay);
+}
 
-const fadeOnLoad = () => {
-  const fadeElements = document.querySelectorAll(".onload");
-  const navbar = document.querySelector("#navbar");
-  navbar.classList.add("navbar-animate-onload");
-  fadeElements.forEach((element) => element.classList.add("fade-onload"));
-};
-// fadeOnLoad()
 window.addEventListener("load", () => {
-  fadeOnLoad();
-});
-
-// Hamburger menu
-// toggleMenu.addEventListener("click", ()=>{
-//    console.log("clicked");
-//    const navList = document.querySelector(".navbar__links")
-//    navList.classList.toggle("menu-open")
-//    // console.log(navList);
-//    // const navList = document.querySelector(".main-header__nav__list")
-//    // navList.classList.toggle("active")
-// })
-
-toggleMenu.addEventListener("click", () => {
-  const navList = document.querySelector(".navbar__links");
-  navList.classList.toggle("menu-open");
+  console.log("window loaded");
 });
 
 // collapses answers in faq.html

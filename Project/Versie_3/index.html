@@ -1,12 +1,17 @@
 <!-- 
     Table of Contents
-    -Header-
-1. Logo
-2. Navbar
-3. Banner
-
-  How it Works Intro 
-1. Banner
+   
+1. LOGO
+2. NAVBAR
+3. HERO IMAGE
+-- 
+4. HOW IT GROWS
+--
+5. DIVIDER
+6. REISHI BENEFITS
+7. GALLERY
+--
+8. FOOTER
 
 -->
 
@@ -53,14 +58,15 @@
   </head>
 
   <body>
-    <!-- ====LOGO==== -->
+    <!-- ==== 1. LOGO==== -->
     <nav class="navbar" id="navbar">
       <div class="navbar__logo">
         <span>Mushroom</span>
         <span>Fruit</span>
       </div>
+
       <i class="fas fa-bars toggle-menu"></i>
-      <!-- ====NAVBAR==== -->
+      <!-- ==== 2. NAVBAR==== -->
 
       <nav class="navbar__links">
         <ul class="navbar__links__list">
@@ -75,7 +81,7 @@
       </nav>
       <a class="nav-shop-btn btn" id="nav-shop-btn" href="#">Shop</a>
     </nav>
-    <!-- ====HERO IMAGE==== -->
+    <!-- ==== 3. HERO IMAGE==== -->
 
     <div class="hero-banner">
       <div class="hero-banner__left-bg">
@@ -87,11 +93,17 @@
         </h3>
         <button class="onload hero-banner__left-bg__btn btn">Go to Shop</button>
       </div>
+
       <div class="hero-banner__right-bg">
-        <img class="onload" src="./Assets/bg-hero-landingpage.jpg" alt="" />
+        <img
+          class="onload"
+          src="./Assets/bg-hero-landingpage.jpg"
+          id="hero-image"
+          alt=""
+        />
       </div>
     </div>
-    <!-- ====HOW IT GROWS START==== -->
+    <!-- ==== 4. HOW IT GROWS ==== -->
     <main>
       <section class="how-it-grows-container">
         <h1>how it grows</h1>
@@ -104,59 +116,151 @@
         </p>
       </section>
 
-      <section class=" phases phase-one ">
+      <section class="phases phase-one">
         <div class="phases__text-header fade-in">
-          <h1>grow phase one</h1>
+          <h1>grow phase i</h1>
           <p>
             Error sit voluptatem accusantium doloremque laudantium, totam rem
             aperiam, eaque ipsa quae abia voluptas sit aspernatur aut odit aut
             fugit, sed quia consequuntu
           </p>
         </div>
+
         <div class="phases__img-container fade-in">
-          <img 
+          <img
+            loading="lazy"
             src="https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg"
             alt=""
           />
         </div>
       </section>
 
-
-      <section class=" phases phase-two">
+      <section class="phases phase-two">
         <div class="phases__text-header fade-in">
-          <h1>grow phase two</h1>
+          <h1>grow phase ii</h1>
           <p>
             Error sit voluptatem accusantium doloremque laudantium, totam rem
             aperiam, eaque ipsa quae abia voluptas sit aspernatur aut odit aut
             fugit, sed quia consequuntu
           </p>
         </div>
+
         <div class="phases__img-container fade-in">
-          <img 
-            src="https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg"
+          <img
+            loading="lazy"
+            src="https://images.pexels.com/photos/247409/pexels-photo-247409.jpeg?cs=srgb&dl=pexels-pixabay-247409.jpg&fm=jpg"
             alt=""
           />
         </div>
       </section>
 
-      <section class=" phases phase-three">
+      <section class="phases phase-three">
         <div class="phases__text-header fade-in">
-          <h1>grow phase three</h1>
+          <h1>grow phase iii</h1>
           <p>
             Error sit voluptatem accusantium doloremque laudantium, totam rem
             aperiam, eaque ipsa quae abia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntu
+            fugit
           </p>
+
+          <div class="phase-three__guide-text fade-in">
+            <h2>!!! Check out the complete guide !!!</h2>
+            <button class="btn grow-guide-btn">grow guide</button>
+          </div>
         </div>
+
         <div class="phases__img-container fade-in">
-          <img 
+          <img
+            loading="lazy"
             src="https://images.pexels.com/photos/210808/pexels-photo-210808.jpeg?cs=srgb&dl=pexels-anton-atanasov-210808.jpg&fm=jpg"
             alt=""
           />
         </div>
       </section>
-    </main>
 
+      <!-- =================== 5. DIVIDER================== -->
+      <div class="divider"></div>
+
+      <!-- ================= 6. REISHI BENEFITS================ -->
+
+      <section class="benefits">
+        <div class="benefits__header">
+          <h1>reishi benefits</h1>
+          <p>
+            In order to get the full benefits of our product check out our
+            complete guide on growing and maintaining your reishi here. In order
+            to get the full benefits of our product check out our complete guide
+            on growing and maintaining your reishi here.
+          </p>
+        </div>
+
+        <div class="benefits__categories">
+          <div class="benefits__categories__left">
+            <i class="fas fa-seedling"></i>
+            <h2>Consuming</h2>
+            <p>
+              In order to get the full benefits of our product check out our
+              complete guide on growing and maintaining your reishi here.
+            </p>
+          </div>
+
+          <div class="benefits__categories__right">
+            <i class="fas fa-heart"></i>
+            <h2>Health</h2>
+            <p>
+              In order to get the full benefits of our product check out our
+              complete guide on growing and maintaining your reishi here.
+            </p>
+          </div>
+        </div>
+        <button class="btn benefits__btn">Learn More</button>
+      </section>
+
+      <!-- ==================== 7. GALLERY=============== -->
+      <section class="gallery">
+        <h1 class="gallery__header">gallery</h1>
+        <div class="gallery__container">
+          <picture>
+            <img
+              loading="lazy"
+              src="https://images.pexels.com/photos/53494/mushroom-fungi-fungus-many-53494.jpeg?cs=srgb&dl=pexels-pixabay-53494.jpg&fm=jpg"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              loading="lazy"
+              src="https://images.pexels.com/photos/5453799/pexels-photo-5453799.jpeg?cs=srgb&dl=pexels-kristina-paukshtite-5453799.jpg&fm=jpg"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              loading="lazy"
+              src="https://images.pexels.com/photos/1685509/pexels-photo-1685509.jpeg?cs=srgb&dl=pexels-egor-kamelev-1685509.jpg&fm=jpg"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              loading="lazy"
+              src="https://images.pexels.com/photos/1685647/pexels-photo-1685647.jpeg?cs=srgb&dl=pexels-egor-kamelev-1685647.jpg&fm=jpg"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              loading="lazy"
+              src="https://images.pexels.com/photos/53494/mushroom-fungi-fungus-many-53494.jpeg?cs=srgb&dl=pexels-pixabay-53494.jpg&fm=jpg"
+              alt=""
+            />
+          </picture>
+        </div>
+
+        <button class="gallery__btn">view more</button>
+      </section>
+    </main>
+    <!-- 8. ===================FOOTER======================== -->
     <footer></footer>
   </body>
 </html>
