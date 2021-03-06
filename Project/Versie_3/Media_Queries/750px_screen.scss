@@ -37,7 +37,7 @@ $transition-speed: 2s;
 
   // HOW IT GROWS PHASES
   .phase-one {
-    background-image: url("https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg");
+    background-image: url("/Assets/placeholder images/image1.jpg");
     & .phases__text-header {
       background-color: white;
       color: $blue;
@@ -47,7 +47,7 @@ $transition-speed: 2s;
     }
   }
   .phase-two {
-    background-image: url("https://images.pexels.com/photos/247409/pexels-photo-247409.jpeg?cs=srgb&dl=pexels-pixabay-247409.jpg&fm=jpg");
+    background-image: url("/Assets/placeholder images/image2.jpg");
     & .phases__text-header {
       border-right: none;
       background-color: $blue;
@@ -61,7 +61,7 @@ $transition-speed: 2s;
     }
   }
   .phase-three {
-    background-image: url("https://images.pexels.com/photos/210808/pexels-photo-210808.jpeg?cs=srgb&dl=pexels-anton-atanasov-210808.jpg&fm=jpg");
+    background-image: url("/Assets/placeholder images/image3.jpg");
     & .phases__text-header {
       background-color: $grey;
       color: $brown;

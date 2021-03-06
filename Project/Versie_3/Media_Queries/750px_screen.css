@@ -6,7 +6,7 @@
     width: 80%;
   }
   .phase-one {
-    background-image: url("https://images.pexels.com/photos/625022/pexels-photo-625022.jpeg?cs=srgb&dl=pexels-tom-swinnen-625022.jpg&fm=jpg");
+    background-image: url("/Assets/placeholder images/image1.jpg");
   }
   .phase-one .phases__text-header {
     background-color: white;
@@ -16,7 +16,7 @@
     border-bottom: 4px solid #2c4353;
   }
   .phase-two {
-    background-image: url("https://images.pexels.com/photos/247409/pexels-photo-247409.jpeg?cs=srgb&dl=pexels-pixabay-247409.jpg&fm=jpg");
+    background-image: url("/Assets/placeholder images/image2.jpg");
   }
   .phase-two .phases__text-header {
     border-right: none;
@@ -30,7 +30,7 @@
     text-align: center;
   }
   .phase-three {
-    background-image: url("https://images.pexels.com/photos/210808/pexels-photo-210808.jpeg?cs=srgb&dl=pexels-anton-atanasov-210808.jpg&fm=jpg");
+    background-image: url("/Assets/placeholder images/image3.jpg");
   }
   .phase-three .phases__text-header {
     background-color: #cccccc;
