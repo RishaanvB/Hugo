@@ -152,4 +152,35 @@ $transition-speed: 2s;
       }
     }
   }
+  
+  // footer
+
+  .footer{
+    & > *{
+      padding: 0 50px;
+      width: 100%;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__extra-info{
+      margin-top: 60px;
+    }
+    &__extra-info__sitemap-info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-start;
+      & h3{
+        align-self: flex-start;
+      }
+     
+    }
+  }
 }
+
+
+

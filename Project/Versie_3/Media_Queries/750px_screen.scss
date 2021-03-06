@@ -147,4 +147,48 @@ $transition-speed: 2s;
       }
     }
   }
+
+  // footer
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+    & > * {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .form-inputs__contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &__name {
+      width: 100%;
+      padding-right: 0;
+    }
+    &__email {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+
+
+  .copyright-section{
+    color:$white;
+    background-color: $blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    & > *{
+      opacity: .5;
+    }
+    &__chevron{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "\f077";
+        color: red;
+      }
+    }
+  }
 }

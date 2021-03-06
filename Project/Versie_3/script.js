@@ -4,6 +4,8 @@ const toggleMenu = document.querySelector(".toggle-menu");
 const fadeElements = document.querySelectorAll(".onload");
 window.addEventListener("scroll", animateImagesOnDisplay);
 
+
+
 // animates navbar into view
 const navbar = document.querySelector("#navbar");
 navbar.classList.add("navbar-animate-onload");

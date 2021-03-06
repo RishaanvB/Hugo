@@ -131,5 +131,48 @@
   .benefits__categories__left {
     margin-bottom: 40px;
   }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer > * {
+    padding: 0 50px;
+    width: 100%;
+  }
+  .footer__extra-info {
+    margin-top: 60px;
+  }
+  .footer__extra-info__sitemap-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .footer__extra-info__sitemap-info h3 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 /*# sourceMappingURL=med_screen.css.map */

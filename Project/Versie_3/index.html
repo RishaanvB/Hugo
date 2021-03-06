@@ -4,12 +4,16 @@
 1. LOGO
 2. NAVBAR
 3. HERO IMAGE
+
+---MAIN---
 -- 
 4. HOW IT GROWS
 --
 5. DIVIDER
 6. REISHI BENEFITS
 7. GALLERY
+
+---MAIN---
 --
 8. FOOTER
 
@@ -70,28 +74,38 @@
 
       <nav class="navbar__links">
         <ul class="navbar__links__list">
-          <li class="nav-link"><a href="#">Home</a></li>
-          <li class="nav-link"><a href="#">How it grows</a></li>
-          <li class="nav-link"><a href="#">Consuming reishi</a></li>
-          <li class="nav-link"><a href="#">FAQ</a></li>
-          <li class="nav-link"><a href="#">Gallery</a></li>
-          <li class="nav-link"><a href="#">About me</a></li>
-          <li class="nav-link"><a href="#">Contact</a></li>
+          <li class="nav-link"><a href="./index.html">Home</a></li>
+          <li class="nav-link"><a href="./wip.html">How it grows</a></li>
+          <li class="nav-link"><a href="./wip.html">Consuming reishi</a></li>
+          <li class="nav-link"><a href="./wip.html">FAQ</a></li>
+          <li class="nav-link"><a href="./wip.html">Gallery</a></li>
+          <li class="nav-link"><a href="./wip.html">About me</a></li>
+          <li class="nav-link"><a href="./wip.html">Contact</a></li>
         </ul>
       </nav>
-      <a class="nav-shop-btn btn" id="nav-shop-btn" href="#">Shop</a>
+      <a
+        class="nav-shop-btn btn"
+        id="nav-shop-btn"
+        href="https://groenetakken.nl/product/reishi/"
+        target="_blank"
+        >Shop</a
+      >
     </nav>
     <!-- ==== 3. HERO IMAGE==== -->
 
     <div class="hero-banner">
       <div class="hero-banner__left-bg">
         <h1 class="onload">Grow your own indoor mushroom !</h1>
-        <!-- <h3 class="now-is-your-chance onload">Now is your chance!</h3> -->
-        <h3 class="onload">
+        <h2 class="onload">
           With the Reishi Growkit from Mushroomfruit, growing indoors has never
           been easier !
-        </h3>
-        <button class="onload hero-banner__left-bg__btn btn">Go to Shop</button>
+        </h2>
+        <a
+          class="onload hero-banner__left-bg__btn btn"
+          href="https://groenetakken.nl/product/reishi/"
+          target="_blank"
+          >Go to Shop</a
+        >
       </div>
 
       <div class="hero-banner__right-bg">
@@ -261,6 +275,88 @@
       </section>
     </main>
     <!-- 8. ===================FOOTER======================== -->
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__form-section">
+        <header class="form-header">
+          <h3>Have Any Questions ?</h3>
+          <h4>Do you have any questions ? Please let us know !</h4>
+        </header>
+
+        <form class="form-inputs" onsubmit="return false">
+          <div class="form-inputs__contact-info">
+            <div class="form-inputs__contact-info__name">
+              <label for="inputname">Name </label>
+              <input
+                type="text"
+                id="inputname"
+                name="inputname"
+                required
+                placeholder="What is your name?"
+              />
+            </div>
+
+            <div class="form-inputs__contact-info__email">
+              <label for="inputemail">Email </label>
+              <input
+                type="email"
+                id="inputemail"
+                name="inputemail"
+                required
+                placeholder="What is your e-mail?"
+              />
+            </div>
+          </div>
+
+          <label class="form-inputs__textarea-label" for="textarea"
+            >Your question</label
+          >
+          <textarea
+            class="form-inputs__textarea"
+            name="textarea"
+            id="textarea"
+            required
+          ></textarea>
+          <input type="submit" value="Send" class="form-submit-btn btn" />
+        </form>
+      </div>
+
+      <section class="footer__extra-info">
+        <div class="footer__extra-info shop-info">
+          <h3>Grow Your Own Reishi</h3>
+          <h4>
+            Interested in growing your own reishi? Visit our partner’s shop and
+            order one!
+          </h4>
+          <a
+            href="https://groenetakken.nl/product/reishi/"
+            target="_blank"
+            class="footer__extra-info-btn btn"
+            >Go To Shop</a
+          >
+        </div>
+        <div class="footer__extra-info__sitemap-info">
+          <h3>mushroomfruit</h3>
+          <nav class="footer__extra-info__sitemap-info__links">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#">How It Grows</a></li>
+              <li><a href="#">Consuming Reishi</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </footer>
+    <footer class="copyright-section">
+      <small>© 2021 MushroomFruit. All rights reserved.</small>
+      <a href="#" class="copyright-section__chevron"
+        ><span><i class="fas fa-chevron-up"></i></span> Back to top</a
+      >
+    </footer>
   </body>
 </html>

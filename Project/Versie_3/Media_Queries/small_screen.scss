@@ -65,4 +65,10 @@ $secondary-font: "Lora", serif;
       width: 90%;
     }
   }
+
+// footer
+  .footer__extra-info__sitemap-info__links{
+    display: flex;
+    flex-direction: column;
+  }
 }
