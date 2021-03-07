@@ -57,7 +57,6 @@ $transition-speed: 2s;
       & h2 {
         font-size: 1rem;
         width: 100%;
-        // padding:20px 0;
       }
     }
     &__right-bg {
@@ -129,26 +128,22 @@ $transition-speed: 2s;
 
     &__text-header {
       position: absolute;
-      //   z-index: 1;
-      //   margin-bottom: -100px;
       bottom: -170px;
       border: none;
       text-align: center;
-      //   height: 260px;
       width: 80%;
 
       height: max-content;
 
       & h1 {
-        // background: white;
-        // margin: 10px 0;
+ 
         font-size: 1.2rem;
         text-align: center;
         padding: 15px 0;
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
         white-space: nowrap;
-        // border-bottom: 4px solid $blue;
+    
       }
       & p {
         width: 100%;
@@ -156,14 +151,12 @@ $transition-speed: 2s;
         min-width: 200px;
         margin: 20px auto;
         padding: 10px 10px;
-        // background-color: white;
+   
       }
     }
     &__img-container {
       display: none;
-      //   z-index: 0;
-      //   padding: 40% 50%;
-      //   object-fit: cover;
+  
     }
   }
   .phase-three {
@@ -184,11 +177,9 @@ $transition-speed: 2s;
         max-width: 100%;
       }
     }
-    // padding: 50px 15%;
     &__categories {
       padding: 20px 0;
       flex-direction: column;
-      // margin:40px auto;
       &__left {
         margin-bottom: 40px;
       }

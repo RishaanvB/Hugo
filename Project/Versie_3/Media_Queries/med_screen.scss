@@ -86,7 +86,6 @@ $transition-speed: 2s;
   .hero-banner {
     flex-direction: column-reverse;
     text-align: center;
-    // justify-content: space-around;
     & > * {
       width: 100%;
     }
@@ -101,7 +100,6 @@ $transition-speed: 2s;
       & h2 {
         font-size: 1.3rem;
         width: 100%;
-        // padding:20px 0;
       }
       & .btn {
         font-size: 1rem;
@@ -155,7 +153,6 @@ $transition-speed: 2s;
     &__categories {
       padding: 20px 0;
       flex-direction: column;
-      // margin:40px auto;
       &__left {
         position: relative;
         margin-bottom: 40px;
