@@ -1,4 +1,4 @@
-// ==================750px screen=================
+// ==================890px screen=================
 $blue: #2c4353;
 $white: whitesmoke;
 $red: #66101f;
@@ -136,14 +136,12 @@ $transition-speed: 2s;
       height: max-content;
 
       & h1 {
- 
         font-size: 1.2rem;
         text-align: center;
         padding: 15px 0;
         width: 100%;
         margin: 0 auto;
         white-space: nowrap;
-    
       }
       & p {
         width: 100%;
@@ -151,12 +149,10 @@ $transition-speed: 2s;
         min-width: 200px;
         margin: 20px auto;
         padding: 10px 10px;
-   
       }
     }
     &__img-container {
       display: none;
-  
     }
   }
   .phase-three {
