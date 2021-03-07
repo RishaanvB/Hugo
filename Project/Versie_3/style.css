@@ -165,13 +165,12 @@ a.nav-shop-btn.btn:active {
   color: #f0f0f0;
   font-size: 3.5rem;
   padding: 1rem 30px 1rem 30px;
-  text-shadow: 5px 4px 4px rgba(27, 26, 26, 0.76);
   font-weight: 500;
 }
 
 .hero-banner__left-bg h2 {
   font-family: "Lora", serif;
-  color: #f0f0f0;
+  color: #cccccc;
   font-weight: 200;
   padding: 0.1rem 50px 1rem 30px;
   line-height: 1.7em;

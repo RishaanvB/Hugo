@@ -2,6 +2,8 @@ $blue: #2c4353;
 $white: whitesmoke;
 $red: #66101f;
 $brown: #3f2627;
+$grey: #cccccc;
+
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
 $transition-speed: 2s;
@@ -84,28 +86,31 @@ $transition-speed: 2s;
   .hero-banner {
     flex-direction: column-reverse;
     text-align: center;
-    // margin: 0 auto;
+    // justify-content: space-around;
     & > * {
       width: 100%;
     }
     &__left-bg {
       height: 35vh;
+      justify-content: center;
       & h1 {
-        font-size: 2.5rem;
-        margin-top: -30px;
+        margin: 0 auto;
+        font-size: 3rem;
+        padding: 20px 0;
       }
-      & h3 {
-        font-size: 0.9rem;
+      & h2 {
+        font-size: 1.3rem;
         width: 100%;
+        // padding:20px 0;
       }
-      & button {
-        font-size: 0.8rem;
+      & .btn {
+        font-size: 1rem;
         align-self: center;
-        margin: 0 0;
+        margin: 10px 0;
       }
     }
     &__right-bg {
-      height: 55vh;
+      height: 65vh;
     }
   }
   // HOW IT GROWS CONTAINER
@@ -138,7 +143,11 @@ $transition-speed: 2s;
       }
     }
   }
-
+  .phase-three__guide-text {
+    & h2 {
+      font-size: 1rem;
+    }
+  }
   // benefits
 
   .benefits {
@@ -148,15 +157,34 @@ $transition-speed: 2s;
       flex-direction: column;
       // margin:40px auto;
       &__left {
+        position: relative;
         margin-bottom: 40px;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: $blue;
+          bottom: 0;
+          width: 50px;
+          height: 2px;
+        }
+        &::before {
+          left: 50%;
+        }
+        &::after {
+          right: 50%;
+        }
+        & p {
+          padding-bottom: 40px;
+        }
       }
     }
   }
-  
+
   // footer
 
-  .footer{
-    & > *{
+  .footer {
+    & > * {
       padding: 0 50px;
       width: 100%;
     }
@@ -165,22 +193,18 @@ $transition-speed: 2s;
     justify-content: space-between;
     align-items: center;
 
-    &__extra-info{
+    &__extra-info {
       margin-top: 60px;
     }
-    &__extra-info__sitemap-info{
+    &__extra-info__sitemap-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       align-self: flex-start;
-      & h3{
+      & h3 {
         align-self: flex-start;
       }
-     
     }
   }
 }
-
-
-

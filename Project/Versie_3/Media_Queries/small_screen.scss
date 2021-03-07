@@ -6,6 +6,9 @@ $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
 
 @media (max-width: 460px) {
+  #body {
+    font-size: 0.8rem;
+  }
   .navbar__logo {
     font-size: 1rem;
   }
@@ -33,15 +36,15 @@ $secondary-font: "Lora", serif;
   .hero-banner {
     &__left-bg {
       & h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
 
         & h3 {
-          font-size: 0.7rem;
-        }
-        & button {
           font-size: 0.6rem;
-          margin: 0 0;
         }
+      }
+      & .btn {
+        font-size: 0.7rem;
+        margin: 0 0;
       }
     }
   }
@@ -65,9 +68,14 @@ $secondary-font: "Lora", serif;
       width: 90%;
     }
   }
+  // phases
 
-// footer
-  .footer__extra-info__sitemap-info__links{
+  .phase-three__guide-text h2 {
+    font-size: 0.8rem;
+  }
+
+  // footer
+  .footer__extra-info__sitemap-info__links {
     display: flex;
     flex-direction: column;
   }

@@ -24,8 +24,47 @@ $transition-speed: 2s;
   opacity: 0;
   transition: all 1.3s ease-out 0.3s;
 }
+@mixin underline {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $blue;
+    top: 50px;
+    width: 70px;
+    max-width: 70px;
+    height: 5px;
+  }
+  &::before {
+    left: 50%;
+  }
+  &::after {
+    right: 50%;
+  }
+}
 
-@media (max-width: 750px) {
+@media (max-width: 890px) {
+  #body {
+    font-size: 1rem;
+  }
+  // hero landing page
+  .hero-banner {
+    &__left-bg {
+      & h1 {
+        font-size: 2.3rem;
+        padding: 10px 10px;
+      }
+      & h2 {
+        font-size: 1rem;
+        width: 100%;
+        // padding:20px 0;
+      }
+    }
+    &__right-bg {
+      height: 65vh;
+    }
+  }
+
   .how-it-grows-container {
     & h1 {
       width: 80%;
@@ -42,7 +81,7 @@ $transition-speed: 2s;
       background-color: white;
       color: $blue;
       & h1 {
-        border-bottom: 4px solid $blue;
+        @include underline;
       }
     }
   }
@@ -53,7 +92,11 @@ $transition-speed: 2s;
       background-color: $blue;
       color: $grey;
       & h1 {
-        border-bottom: 4px solid $grey;
+        @include underline;
+        &::before,
+        &::after {
+          background-color: $grey;
+        }
       }
       & p {
         text-align: center;
@@ -64,9 +107,13 @@ $transition-speed: 2s;
     background-image: url("/Assets/placeholder images/image3.jpg");
     & .phases__text-header {
       background-color: $grey;
-      color: $brown;
+      color: $blue;
       & h1 {
-        border-bottom: 4px solid $brown;
+        @include underline;
+        &::before,
+        &::after {
+          background-color: $blue;
+        }
       }
     }
   }
@@ -75,7 +122,7 @@ $transition-speed: 2s;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 420px;
     flex-direction: column-reverse;
     margin-bottom: 250px;
@@ -101,7 +148,7 @@ $transition-speed: 2s;
         width: 50%;
         margin: 0 auto;
         white-space: nowrap;
-        border-bottom: 4px solid $blue;
+        // border-bottom: 4px solid $blue;
       }
       & p {
         width: 100%;
@@ -172,19 +219,18 @@ $transition-speed: 2s;
     }
   }
 
-
-  .copyright-section{
-    color:$white;
+  .copyright-section {
+    color: $white;
     background-color: $blue;
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
-    & > *{
-      opacity: .5;
+    & > * {
+      opacity: 0.5;
     }
-    &__chevron{
+    &__chevron {
       position: relative;
-      &::before{
+      &::before {
         position: absolute;
         content: "\f077";
         color: red;

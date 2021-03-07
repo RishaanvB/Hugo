@@ -1,4 +1,7 @@
 @media (max-width: 460px) {
+  #body {
+    font-size: 0.8rem;
+  }
   .navbar__logo {
     font-size: 1rem;
   }
@@ -21,13 +24,13 @@
     height: 230px;
   }
   .hero-banner__left-bg h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .hero-banner__left-bg h1 h3 {
-    font-size: 0.7rem;
-  }
-  .hero-banner__left-bg h1 button {
     font-size: 0.6rem;
+  }
+  .hero-banner__left-bg .btn {
+    font-size: 0.7rem;
     margin: 0 0;
   }
   .how-it-grows-container h1 {
@@ -45,6 +48,9 @@
   .how-it-grows-container p {
     font-size: 0.8rem;
     width: 90%;
+  }
+  .phase-three__guide-text h2 {
+    font-size: 0.8rem;
   }
   .footer__extra-info__sitemap-info__links {
     display: -webkit-box;

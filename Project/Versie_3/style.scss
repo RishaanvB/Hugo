@@ -58,6 +58,24 @@ $transition-speed: 2s;
   opacity: 0;
   transition: all 1.3s ease-out 0.3s;
 }
+
+@mixin underline {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $blue;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+  }
+  &::before {
+    left: 50%;
+  }
+  &::after {
+    right: 50%;
+  }
+}
 body {
   // width: 100vw;
   background-color: $white;
@@ -163,17 +181,18 @@ a.nav-shop-btn.btn {
     background-color: $blue;
     & h1 {
       text-transform: uppercase;
+
       margin-top: -60px;
       color: $white;
       font-size: 3.5rem;
       padding: 1rem 30px 1rem 30px;
-      text-shadow: 5px 4px 4px rgba(27, 26, 26, 0.76);
+      // text-shadow: 5px 4px 4px rgba(27, 26, 26, 0.76);
       font-weight: 500;
     }
 
     & h2 {
       font-family: $secondary-font;
-      color: $white;
+      color: $grey;
       font-weight: 200;
       padding: 0.1rem 50px 1rem 30px;
       line-height: 1.7em;
