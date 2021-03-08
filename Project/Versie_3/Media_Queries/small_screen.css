@@ -61,5 +61,27 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  h2.faq-header {
+    padding: 30px;
+    font-size: 1rem;
+  }
+  h2.faq-header::before, h2.faq-header::after {
+    display: none;
+  }
+  .faq-container {
+    padding: 5px;
+    width: 100%;
+  }
+  .faq-container h3 {
+    font-size: .8rem;
+    max-width: 90%;
+  }
+  .faq-container__chevron {
+    font-size: .6rem;
+    right: 5px;
+  }
+  .faq-container p {
+    font-size: 0.8rem;
+  }
 }
 /*# sourceMappingURL=small_screen.css.map */

@@ -1,3 +1,13 @@
+.onload.fade-onload {
+  opacity: 1;
+}
+
+.onload {
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+}
+
 body {
   background-color: #f0f0f0;
   font-family: "Roboto", sans-serif;
@@ -90,9 +100,9 @@ body {
 }
 
 .navbar__links ul li:hover {
-  color: #a7600c;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  color: #301e1eea;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .toggle-menu.fa-bars {
@@ -124,16 +134,6 @@ a.nav-shop-btn.btn:active {
           transform: scale(0.97);
 }
 
-.onload {
-  opacity: 0;
-  -webkit-transition: opacity 2s ease;
-  transition: opacity 2s ease;
-}
-
-.onload.fade-onload {
-  opacity: 1;
-}
-
 .hero-banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,7 +156,7 @@ a.nav-shop-btn.btn:active {
       -ms-flex-pack: center;
           justify-content: center;
   width: 35vw;
-  background-color: #2c4353;
+  background-color: #30475e;
 }
 
 .hero-banner__left-bg h1 {
@@ -179,10 +179,10 @@ a.nav-shop-btn.btn:active {
 
 .hero-banner__left-bg a {
   border: none;
-  border: 2px solid #2c4353;
+  border: 2px solid #30475e;
   padding: 1em 1.5em;
   text-transform: uppercase;
-  background-color: #2c4353;
+  background-color: #30475e;
   color: #f0f0f0;
   -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
@@ -202,7 +202,7 @@ a.nav-shop-btn.btn:active {
 
 .hero-banner__left-bg a:hover {
   background-color: #f0f0f0;
-  color: #2c4353;
+  color: #30475e;
   cursor: pointer;
 }
 
@@ -232,7 +232,7 @@ a.nav-shop-btn.btn:active {
 .how-it-grows-container {
   margin: 30px auto;
   text-align: center;
-  padding: 20px 0;
+  padding: 80px 0;
 }
 
 .how-it-grows-container h1 {
@@ -322,7 +322,7 @@ a.nav-shop-btn.btn:active {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  border-left: 20px solid #2c4353;
+  border-left: 20px solid #30475e;
   padding: 5px 20px;
 }
 
@@ -373,7 +373,7 @@ a.nav-shop-btn.btn:active {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  background-color: #2c4353;
+  background-color: #30475e;
   text-align: right;
 }
 
@@ -399,7 +399,7 @@ a.nav-shop-btn.btn:active {
   transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
-  color: #2c4353;
+  color: #30475e;
   text-transform: uppercase;
   font-style: italic;
   font-size: 0.8rem;
@@ -410,10 +410,10 @@ a.nav-shop-btn.btn:active {
 
 .phase-three__guide-text .btn {
   border: none;
-  border: 2px solid #2c4353;
+  border: 2px solid #30475e;
   padding: 1em 1.5em;
   text-transform: uppercase;
-  background-color: #2c4353;
+  background-color: #30475e;
   color: #f0f0f0;
   -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
@@ -422,7 +422,7 @@ a.nav-shop-btn.btn:active {
 
 .phase-three__guide-text .btn:hover {
   background-color: #f0f0f0;
-  color: #2c4353;
+  color: #30475e;
   cursor: pointer;
 }
 
@@ -462,7 +462,7 @@ a.nav-shop-btn.btn:active {
 }
 
 .benefits__header h1 {
-  color: #2c4353;
+  color: #30475e;
   margin: 30px auto;
   width: 100%;
   position: relative;
@@ -474,7 +474,7 @@ a.nav-shop-btn.btn:active {
 .benefits__header h1::before {
   position: absolute;
   z-index: 2;
-  background: #2c4353;
+  background: #30475e;
   content: "";
   width: 10%;
   height: 2px;
@@ -487,7 +487,7 @@ a.nav-shop-btn.btn:active {
 .benefits__header h1::after {
   position: absolute;
   z-index: 2;
-  background: #2c4353;
+  background: #30475e;
   content: "";
   width: 10%;
   height: 2px;
@@ -528,7 +528,7 @@ a.nav-shop-btn.btn:active {
 .benefits__categories h2 {
   padding: 20px 0;
   font-family: "Lora", serif;
-  color: #2c4353;
+  color: #30475e;
   font-weight: 500;
 }
 
@@ -542,10 +542,10 @@ a.nav-shop-btn.btn:active {
 
 .benefits__btn {
   border: none;
-  border: 2px solid #2c4353;
+  border: 2px solid #30475e;
   padding: 1em 1.5em;
   text-transform: uppercase;
-  background-color: #2c4353;
+  background-color: #30475e;
   color: #f0f0f0;
   -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
@@ -553,7 +553,7 @@ a.nav-shop-btn.btn:active {
 
 .benefits__btn:hover {
   background-color: #f0f0f0;
-  color: #2c4353;
+  color: #30475e;
   cursor: pointer;
 }
 
@@ -586,7 +586,7 @@ a.nav-shop-btn.btn:active {
   font-size: 1.5rem;
   text-transform: uppercase;
   text-align: center;
-  color: #2c4353;
+  color: #30475e;
   width: 50%;
   position: relative;
   z-index: 99;
@@ -597,7 +597,7 @@ a.nav-shop-btn.btn:active {
 .gallery__header::before {
   position: absolute;
   z-index: 2;
-  background: #2c4353;
+  background: #30475e;
   content: "";
   width: 10%;
   height: 2px;
@@ -610,7 +610,7 @@ a.nav-shop-btn.btn:active {
 .gallery__header::after {
   position: absolute;
   z-index: 2;
-  background: #2c4353;
+  background: #30475e;
   content: "";
   width: 10%;
   height: 2px;
@@ -622,10 +622,10 @@ a.nav-shop-btn.btn:active {
 
 .gallery__btn {
   border: none;
-  border: 2px solid #2c4353;
+  border: 2px solid #30475e;
   padding: 1em 1.5em;
   text-transform: uppercase;
-  background-color: #2c4353;
+  background-color: #30475e;
   color: #f0f0f0;
   -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
@@ -633,7 +633,7 @@ a.nav-shop-btn.btn:active {
 
 .gallery__btn:hover {
   background-color: #f0f0f0;
-  color: #2c4353;
+  color: #30475e;
   cursor: pointer;
 }
 
@@ -682,7 +682,7 @@ a.nav-shop-btn.btn:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #2c4353;
+  background-color: #30475e;
   color: #f0f0f0;
   width: 100%;
   padding: 60px 30px;
@@ -740,7 +740,7 @@ a.nav-shop-btn.btn:active {
   padding: 1em 1.5em;
   text-transform: uppercase;
   background-color: #f0f0f0;
-  color: #2c4353;
+  color: #30475e;
   -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
   display: block;
@@ -752,7 +752,7 @@ a.nav-shop-btn.btn:active {
 }
 
 .footer .btn:hover {
-  background-color: #2c4353;
+  background-color: #30475e;
   color: #f0f0f0;
   cursor: pointer;
 }
@@ -888,6 +888,8 @@ a.nav-shop-btn.btn:active {
 .form-inputs__textarea {
   min-width: 100%;
   max-width: 100%;
+  min-height: 100px;
+  width: 100%;
   height: 150px;
   padding: 5px;
   font-size: 0.9rem;
@@ -926,7 +928,7 @@ a.nav-shop-btn.btn:active {
 .copyright-section {
   border-top: 1px solid #656565;
   color: #f0f0f0;
-  background-color: #2c4353;
+  background-color: #30475e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,5 +952,153 @@ a.nav-shop-btn.btn:active {
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+}
+
+.faq-main-section {
+  border-bottom: 15px solid #cccccc;
+}
+
+.faq-banner {
+  top: 10px;
+  padding: 100px 2%;
+  padding-top: 177px;
+  text-align: center;
+  background-color: #30475e;
+  color: #f0f0f0;
+  font-size: calc(10px + 1.2vw);
+  text-transform: uppercase;
+  border-bottom: 15px solid #cccccc;
+}
+
+.faq-banner h1 {
+  text-align: center;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+
+.faq-banner h1 i {
+  position: absolute;
+  z-index: 0;
+  top: -100px;
+  left: -180px;
+  color: rgba(233, 233, 233, 0.4);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  font-size: 15rem;
+}
+
+.faq-banner h1 i.comment-small {
+  font-size: 10rem;
+  top: -10px;
+  left: -240px;
+  color: #b4cbe0;
+  opacity: 0.4;
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+h2.faq-header {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  padding: 50px 0 80px;
+  color: #131313;
+}
+
+h2.faq-header:before, h2.faq-header:after {
+  content: "";
+  position: absolute;
+  background-color: #131313;
+  top: 95px;
+  width: 15%;
+  height: 5px;
+}
+
+h2.faq-header::before {
+  right: 50%;
+}
+
+h2.faq-header::after {
+  left: 50%;
+}
+
+.faq-container {
+  color: #131313;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(1fr, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  grid-gap: 30px;
+  margin: 10px auto 70px;
+  padding: 50px 30px;
+  background-color: #dfdfdf;
+  -webkit-box-shadow: 1px 5px 5px #7272727a;
+          box-shadow: 1px 5px 5px #7272727a;
+  width: 70%;
+  text-align: center;
+}
+
+.faq-container__aq-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border-left: 5px solid #30475e;
+  text-align: left;
+  position: relative;
+  padding: 0 10px;
+}
+
+.faq-container__aq-block:hover {
+  cursor: pointer;
+  color: #17232c;
+}
+
+.faq-container__chevron {
+  position: absolute;
+  top: 3px;
+  right: 50px;
+  -webkit-transition: -webkit-transform .1s ease-in;
+  transition: -webkit-transform .1s ease-in;
+  transition: transform .1s ease-in;
+  transition: transform .1s ease-in, -webkit-transform .1s ease-in;
+}
+
+.faq-container__chevron.display-question {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.faq-container h3 {
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-right: 30px;
+  max-width: 70%;
+}
+
+.faq-container .faq-answer {
+  font-family: "Lora", serif;
+  padding: 20px 10px;
+  display: none;
+  max-width: 70%;
+  line-height: 1.3rem;
+}
+
+.faq-container .faq-answer__bold {
+  font-weight: 900;
+}
+
+.faq-container .faq-answer.display-question {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

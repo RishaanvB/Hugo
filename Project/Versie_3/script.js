@@ -1,9 +1,8 @@
-const question = Array.from(document.querySelectorAll(".question-collapsable"));
 const galleryImg = Array.from(document.querySelectorAll(".image"));
 const toggleMenu = document.querySelector(".toggle-menu");
 const fadeElements = document.querySelectorAll(".onload");
 window.addEventListener("scroll", animateImagesOnDisplay);
-
+const questions = document.querySelectorAll(".faq-container__aq-block ")
 
 
 // animates navbar into view
@@ -52,13 +51,15 @@ window.addEventListener("load", () => {
   console.log("window loaded");
 });
 
-// collapses answers in faq.html
-question.forEach((question) => {
-  question.addEventListener("click", (e) => {
-    const classNameAnswer = e.target.nextElementSibling.classList;
-    classNameAnswer.toggle("hidden-answer");
-  });
-});
+// handles collapsable questions in faq.html
+questions.forEach(question=>{
+  question.addEventListener("click", ()=>{
+    const answer = question.childNodes[5]
+    const chevron = question.childNodes[1]
+    answer.classList.toggle("display-question")
+    chevron.classList.toggle("display-question")
+  })
+})
 
 const showModal = (image) => {
   const modal = document.createElement("div");

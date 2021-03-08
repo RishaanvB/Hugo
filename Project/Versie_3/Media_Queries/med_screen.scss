@@ -53,7 +53,7 @@ $transition-speed: 2s;
       transition: opacity 0.5s ease, height 0.2s ease-in;
       &.menu-open {
         display: flex;
-        height: 270px;
+        height: 280px;
         opacity: 1;
       }
     }
