@@ -54,6 +54,9 @@ window.addEventListener("load", () => {
 // handles collapsable questions in faq.html
 questions.forEach(question=>{
   question.addEventListener("click", ()=>{
+    const block = question.parentNode
+    console.log(block);
+    question.classList.toggle("display-question")
     const answer = question.childNodes[5]
     const chevron = question.childNodes[1]
     answer.classList.toggle("display-question")

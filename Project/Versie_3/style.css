@@ -1032,12 +1032,12 @@ h2.faq-header::after {
   display: grid;
   -ms-grid-columns: (minmax(1fr, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  -webkit-box-shadow: 1px 5px 5px #7272727a;
+          box-shadow: 1px 5px 5px #7272727a;
   grid-gap: 30px;
   margin: 10px auto 70px;
   padding: 50px 30px;
   background-color: #dfdfdf;
-  -webkit-box-shadow: 1px 5px 5px #7272727a;
-          box-shadow: 1px 5px 5px #7272727a;
   width: 70%;
   text-align: center;
 }
@@ -1054,7 +1054,15 @@ h2.faq-header::after {
   border-left: 5px solid #30475e;
   text-align: left;
   position: relative;
-  padding: 0 10px;
+  padding: 10px 10px;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+.faq-container__aq-block.display-question {
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 1px 2px 5px rgba(41, 41, 41, 0.432);
+          box-shadow: 1px 2px 5px rgba(41, 41, 41, 0.432);
 }
 
 .faq-container__aq-block:hover {
@@ -1064,12 +1072,12 @@ h2.faq-header::after {
 
 .faq-container__chevron {
   position: absolute;
-  top: 3px;
-  right: 50px;
-  -webkit-transition: -webkit-transform .1s ease-in;
-  transition: -webkit-transform .1s ease-in;
-  transition: transform .1s ease-in;
-  transition: transform .1s ease-in, -webkit-transform .1s ease-in;
+  top: 12px;
+  right: 20px;
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  transition: -webkit-transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
 }
 
 .faq-container__chevron.display-question {

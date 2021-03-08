@@ -723,7 +723,6 @@ a.nav-shop-btn.btn {
     margin: 0 auto;
     width: max-content;
     position: relative;
-   
   }
   & h1 i {
     position: absolute;
@@ -773,39 +772,41 @@ h2.faq-header {
   color: $black;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  box-shadow: 1px 5px 5px #7272727a;
   grid-gap: 30px;
   margin: 10px auto 70px;
   padding: 50px 30px;
   background-color: #dfdfdf;
-  box-shadow: 1px 5px 5px #7272727a;
   width: 70%;
   text-align: center;
   &__aq-block {
     display: flex;
     flex-direction: column;
-width: 100%;
+    width: 100%;
     border-left: 5px solid $blue;
     text-align: left;
     position: relative;
-    padding: 0 10px;
-
+    padding: 10px 10px;
+    transition: all .1s ease-in;
+    &.display-question{
+      background-color: $white;
+      box-shadow: 1px 2px 5px rgba(41, 41, 41, 0.432);
+    }
     &:hover {
-      
       cursor: pointer;
       color: #17232c;
     }
-   
   }
-  
+
   &__chevron {
     position: absolute;
-    top: 3px;
-    right: 50px;
-    
-    transition: transform .1s ease-in;
-    &.display-question{
-      transform: translateY(3px); transform:  rotateZ(180deg);
+    top: 12px;
+    right: 20px;
 
+    transition: transform 0.1s ease-in;
+    &.display-question {
+      transform: translateY(3px);
+      transform: rotateZ(180deg);
     }
   }
   & h3 {
@@ -821,13 +822,12 @@ width: 100%;
     max-width: 70%;
     line-height: 1.3rem;
     // font-style: italic;
-    &__bold{
+    &__bold {
       font-weight: 900;
     }
 
-    &.display-question{
+    &.display-question {
       display: block;
-      
     }
   }
 }
