@@ -1,4 +1,4 @@
-$blue: #30475e;
+$blue: #334e58;
 $black: rgb(19, 19, 19);
 $white: #f0f0f0;
 $red: #66101f;
@@ -8,6 +8,15 @@ $silver: #656565;
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
 $transition-speed: 2s;
+$yellow: #fff689;
+
+
+*:focus {
+  background-color: $yellow !important;
+  color: black !important;
+  font-size: 1.5rem !important;
+}
+
 @mixin btn-blue {
   border: none;
   border: 2px solid $blue;
@@ -23,6 +32,10 @@ $transition-speed: 2s;
   }
   &:active {
     transform: scale(0.97);
+  }
+  &:focus {
+    color: black;
+    background-color: $yellow;
   }
 }
 
@@ -41,6 +54,10 @@ $transition-speed: 2s;
   }
   &:active {
     transform: scale(0.97);
+  }
+  &:focus {
+    color: black;
+    background-color: $yellow;
   }
 }
 
@@ -775,7 +792,7 @@ h2.faq-header {
   box-shadow: 1px 5px 5px #7272727a;
   grid-gap: 30px;
   margin: 10px auto 70px;
-  padding: 50px 30px;
+  padding: 60px 40px;
   background-color: #dfdfdf;
   width: 70%;
   text-align: center;
@@ -784,17 +801,20 @@ h2.faq-header {
     flex-direction: column;
     width: 100%;
     border-left: 5px solid $blue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     text-align: left;
     position: relative;
     padding: 10px 10px;
-    transition: all .1s ease-in;
-    &.display-question{
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+    &.display-question {
       background-color: $white;
-      box-shadow: 1px 2px 5px rgba(41, 41, 41, 0.432);
+      box-shadow: 1px 2px 5px rgba(41, 41, 41, 0.308);
     }
     &:hover {
       cursor: pointer;
       color: #17232c;
+      background-color: #f0f0f0c7;
     }
   }
 
