@@ -73,15 +73,15 @@
     width: 100%;
   }
   .faq-container h3 {
-    font-size: .8rem;
+    font-size: 0.8rem;
     max-width: 90%;
   }
   .faq-container__chevron {
-    font-size: .6rem;
+    font-size: 0.6rem;
     right: 5px;
   }
   .faq-container p {
     font-size: 0.8rem;
   }
 }
-/*# sourceMappingURL=small_screen.css.map */
+/*# sourceMappingURL=460px_screen.css.map */

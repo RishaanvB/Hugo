@@ -79,28 +79,29 @@ $secondary-font: "Lora", serif;
     display: flex;
     flex-direction: column;
   }
-    // faq 
+  // faq
 
-h2.faq-header{
-  padding: 30px;
-  font-size: 1rem;
-  &::before, &::after{
-    display: none;
+  h2.faq-header {
+    padding: 30px;
+    font-size: 1rem;
+    &::before,
+    &::after {
+      display: none;
+    }
   }
-}
-.faq-container{
-  padding: 5px;
-  width: 100%;
-  & h3{
-    font-size: .8rem;
-    max-width: 90%;
+  .faq-container {
+    padding: 5px;
+    width: 100%;
+    & h3 {
+      font-size: 0.8rem;
+      max-width: 90%;
+    }
+    &__chevron {
+      font-size: 0.6rem;
+      right: 5px;
+    }
+    & p {
+      font-size: 0.8rem;
+    }
   }
-  &__chevron{
-    font-size: .6rem;
-    right: 5px;
-  }
-  & p{
-    font-size: 0.8rem;
-  }
-}
 }
