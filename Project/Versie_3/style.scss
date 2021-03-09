@@ -10,7 +10,6 @@ $secondary-font: "Lora", serif;
 $transition-speed: 2s;
 $yellow: #fff689;
 
-
 *:focus {
   background-color: $yellow !important;
   color: black !important;
@@ -834,11 +833,14 @@ h2.faq-header {
     font-weight: 400;
     margin-right: 30px;
     max-width: 70%;
+    flex-basis: 100;
   }
   & .faq-answer {
+    display: none;
     font-family: $secondary-font;
     padding: 20px 10px;
-    display: none;
+    // flex-grow: 100;
+    // display: flex;
     max-width: 70%;
     line-height: 1.3rem;
     // font-style: italic;

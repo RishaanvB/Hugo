@@ -1128,12 +1128,14 @@ h2.faq-header::after {
   font-weight: 400;
   margin-right: 30px;
   max-width: 70%;
+  -ms-flex-preferred-size: 100;
+      flex-basis: 100;
 }
 
 .faq-container .faq-answer {
+  display: none;
   font-family: "Lora", serif;
   padding: 20px 10px;
-  display: none;
   max-width: 70%;
   line-height: 1.3rem;
 }
