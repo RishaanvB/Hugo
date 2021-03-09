@@ -204,4 +204,20 @@ $transition-speed: 2s;
       }
     }
   }
+
+   // faq
+   .faq-container {
+    padding: 10px;
+    width: 90%;
+    & h3 {
+      font-size: 0.9rem;
+      max-width: 80%;
+    }
+    &__chevron {
+      font-size: 0.8rem;
+      right: 10px;
+    }
+  }
+
+
 }
