@@ -1223,11 +1223,49 @@ h2.faq-header::after {
   position: relative;
 }
 
+@-webkit-keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes modal-zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes modal-zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .modal-background {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1240,10 +1278,12 @@ h2.faq-header::after {
   height: 100%;
   -webkit-backdrop-filter: blur(5px) brightness(20%);
           backdrop-filter: blur(5px) brightness(20%);
-  -webkit-transform: scale(1);
-          transform: scale(1);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  -webkit-animation-name: modal-opacity;
+          animation-name: modal-opacity;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
 }
 
 .modal-background-arrow {
@@ -1288,6 +1328,10 @@ h2.faq-header::after {
 }
 
 .modal-content {
+  -webkit-animation-name: modal-zoom;
+          animation-name: modal-zoom;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

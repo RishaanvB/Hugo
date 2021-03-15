@@ -83,5 +83,20 @@
   .faq-container p {
     font-size: 0.8rem;
   }
+  .modal-background-arrow {
+    font-size: 2rem;
+  }
+  .fa-chevron-right {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  .fa-chevron-left {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  .fa-times {
+    top: 5px;
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=460px_screen.css.map */

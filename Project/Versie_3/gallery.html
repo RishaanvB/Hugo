@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#2c4353" />
     <!-- Check Open graph protocol for extra meta data -->
 
-    <title>MushroomFruit | Home</title>
+    <title>MushroomFruit | Gallery</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap"
@@ -86,9 +86,12 @@
         <figure class="gallery-container__img-container">
           <img
             class="gallery-container__img onload"
-            src="./Assets/placeholder images/image3.jpg"
+            src="./Assets/placeholder images/image1.jpg"
             alt="picture1"
           />
+          <figcaption class="modal-content__figcaption">
+            Beschrijving foto: foto 1
+          </figcaption>
         </figure>
 
         <figure class="gallery-container__img-container">
@@ -97,14 +100,20 @@
             src="./Assets/placeholder images/image2.jpg"
             alt="picture2"
           />
+          <figcaption class="modal-content__figcaption">
+            Beschrijving foto: fot 2
+          </figcaption>
         </figure>
 
         <figure class="gallery-container__img-container">
           <img
             class="gallery-container__img onload"
-            src="./Assets/placeholder images/image1.jpg"
+            src="./Assets/placeholder images/image3.jpg"
             alt="picture3"
           />
+          <figcaption class="modal-content__figcaption">
+            Beschrijving foto: foto3
+          </figcaption>
         </figure>
 
         <figure class="gallery-container__img-container">
@@ -113,6 +122,9 @@
             src="./Assets/placeholder images/image4.jpg"
             alt="picture1"
           />
+          <figcaption class="modal-content__figcaption">
+            Beschrijving foto: foto4
+          </figcaption>
         </figure>
 
         <figure class="gallery-container__img-container">
@@ -121,27 +133,24 @@
             src="./Assets/placeholder images/image5.jpg"
             alt="picture2"
           />
+          <figcaption class="modal-content__figcaption">
+            Beschrijving foto: foto5
+          </figcaption>
         </figure>
 
-        <figure class="gallery-container__img-container">
-          <img
-            class="gallery-container__img onload"
-            src="./Assets/placeholder images/image1.jpg"
-            alt="picture3"
-          />
-        </figure>
+       
       </div>
       <!-- =========================MODAL=================== -->
-      <div class="modal-background">
+      <div class="modal-background" id="modal-background">
         <i class="fas fa-chevron-left modal-background-arrow"></i>
+        <i class="fas fa-times" id="close-modal"></i>
 
         <figure class="modal-content">
           <div class="modal-content__img-container">
-            <i class="fas fa-times"></i>
-            <img src="./Assets/placeholder images/image1.jpg" alt="picture3" />
+            <img src="" alt="" id="modal-img" />
           </div>
 
-          <figcaption class="modal-content__figcaption">
+          <figcaption class="modal-content__figcaption" id="modal-content__figcaption">
             Beschrijving foto: Dit is een rode paddestoel met witte stippen
           </figcaption>
         </figure>

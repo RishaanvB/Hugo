@@ -906,11 +906,25 @@ h2.faq-header {
 #gallery-main {
   position: relative;
 }
-
+@keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modal-zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .modal-background {
   position: fixed;
-  display: flex;
-  // display: none;
+  display: none;
   justify-content: space-evenly;
   align-items: center;
   top: 0;
@@ -918,9 +932,11 @@ h2.faq-header {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(5px) brightness(20%);
-  transform: scale(1);
   transition: all 1s ease;
+  animation-name: modal-opacity;
+  animation-duration: .5s;
 }
+
 .modal-background-arrow {
   z-index: 999;
   color: white;
@@ -953,6 +969,8 @@ h2.faq-header {
   }
 }
 .modal-content {
+  animation-name: modal-zoom;
+  animation-duration: .5s;
   display: flex;
   flex-direction: column;
   justify-content: center;

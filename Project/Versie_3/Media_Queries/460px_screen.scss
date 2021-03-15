@@ -4,6 +4,8 @@ $red: #66101f;
 $brown: #3f2627;
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Lora", serif;
+$grey: #cccccc;
+
 
 @media (max-width: 460px) {
   #body {
@@ -104,4 +106,25 @@ $secondary-font: "Lora", serif;
       font-size: 0.8rem;
     }
   }
+
+
+// gallery
+
+.modal-background-arrow {
+ 
+  font-size: 2rem;
+ 
+}
+.fa-chevron-right {
+  transform: translateX(-30px);
+}
+.fa-chevron-left {
+  transform: translateX(30px);
+}
+.fa-times {
+  top: 5px;
+  font-size: 1.5rem;
+}
+
+
 }
