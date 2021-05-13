@@ -1,4 +1,4 @@
-$blue: #334e58;
+$blue: #25455E;
 $black: rgb(19, 19, 19);
 $white: #f0f0f0;
 $red: #66101f;
@@ -277,7 +277,7 @@ a.nav-shop-btn.btn {
     width: 30%;
     position: relative;
     z-index: 99;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 500;
     &::before {
       position: absolute;
@@ -333,7 +333,7 @@ a.nav-shop-btn.btn {
     border-left: 20px solid $blue;
     padding: 5px 20px;
     & h1 {
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-weight: 500;
     }
     & p {
@@ -386,7 +386,7 @@ a.nav-shop-btn.btn {
   &__guide-text {
     @include fade-onscroll;
     color: $blue;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-style: italic;
     font-size: 0.8rem;
     text-align: center;
@@ -428,7 +428,7 @@ a.nav-shop-btn.btn {
       width: 100%;
       position: relative;
       z-index: 99;
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-weight: 500;
       &::before {
         position: absolute;
@@ -505,13 +505,12 @@ a.nav-shop-btn.btn {
   &__header {
     margin: 0 auto;
     font-size: 1.5rem;
-    text-transform: uppercase;
     text-align: center;
     color: $blue;
     width: 50%;
     position: relative;
     z-index: 99;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 500;
     &::before {
       position: absolute;
