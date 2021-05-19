@@ -100,17 +100,6 @@
   .hero-banner__right-bg {
     height: 65vh;
   }
-  .how-it-grows-container h1 {
-    width: 50%;
-  }
-  .how-it-grows-container h1::before {
-    width: 25%;
-    left: 0;
-  }
-  .how-it-grows-container h1::after {
-    width: 25%;
-    right: 0;
-  }
   .how-it-grows-container p {
     width: 50%;
     margin: 20px auto;

@@ -112,24 +112,24 @@ $transition-speed: 2s;
     }
   }
   // HOW IT GROWS CONTAINER
-  .how-it-grows-container {
-    & h1 {
-      width: 50%;
-      &::before {
-        width: 25%;
-        left: 0;
-      }
-      &::after {
-        width: 25%;
-        right: 0;
-      }
-    }
-    & p {
+  // .how-it-grows-container {
+  //   & h1 {
+  //     width: 50%;
+  //     &::before {
+  //       width: 25%;
+  //       left: 0;
+  //     }
+  //     &::after {
+  //       width: 25%;
+  //       right: 0;
+  //     }
+  //   }
+    .how-it-grows-container p {
       width: 50%;
       margin: 20px auto;
       line-height: 1.5rem;
     }
-  }
+  
 
   // phase one how it grows
   .phases {
