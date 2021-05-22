@@ -1,4 +1,5 @@
 $blue: #25455e;
+$dark-blue: #224056;
 $black: rgb(19, 19, 19);
 $white: #f0f0f0;
 $red: #66101f;
@@ -15,7 +16,7 @@ $yellow: #fff689;
   font-size: 1rem;
   color: $white;
   text-transform: uppercase;
-  padding: .6rem 1.2rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   border: 2px solid $blue;
   background-color: $blue;
@@ -28,7 +29,6 @@ $yellow: #fff689;
   &:active {
     transform: scale(0.97);
   }
- 
 }
 
 @mixin btn-white {
@@ -36,7 +36,7 @@ $yellow: #fff689;
   font-size: 1rem;
   color: $blue;
   text-transform: uppercase;
-  padding: .6rem 1.2rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   border: 2px solid $white;
   background-color: $white;
@@ -49,7 +49,6 @@ $yellow: #fff689;
   &:active {
     transform: scale(0.97);
   }
- 
 }
 
 @mixin fade-onscroll {
@@ -67,66 +66,66 @@ $yellow: #fff689;
   transition: all 1.3s ease-out 0.3s;
 }
 
-@mixin underline {
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    background-color: $blue;
-    bottom: 0;
-    width: 50px;
-    height: 2px;
-  }
-  &::before {
-    left: 50%;
-  }
-  &::after {
-    right: 50%;
-  }
-}
+// @mixin underline {
+//   &:before,
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     background-color: $blue;
+//     bottom: 5px;
+//     width: 50px;
+//     height: 2px;
+//   }
+//   &::before {
+//     left: 50%;
+//   }
+//   &::after {
+//     right: 50%;
+//   }
+// }
 
 @mixin underline-header {
   &::after {
     position: absolute;
     background: $blue;
     content: "";
-    height: 8px;
+    height: 6px;
     left: 50%;
-    bottom: 1px;
-    width: 55%;
-    opacity: 0.7;
+    bottom: -6px;
+    width: 50%;
+    // opacity: 0.7;
     z-index: -1;
   }
   &::before {
     position: absolute;
     background: $blue;
     content: "";
-    height: 8px;
+    height: 6px;
     right: 50%;
-    bottom: 1px;
-    width: 55%;
-    opacity: 0.7;
+    bottom: -6px;
+    width: 50%;
+    // opacity: 0.7;
     z-index: -1;
   }
 }
 
-@mixin big_underline {
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    background-color: $black;
-    top: 95px;
-    width: 15%;
-    height: 5px;
-  }
-  &::before {
-    right: 50%;
-  }
-  &::after {
-    left: 50%;
-  }
-}
+// @mixin big_underline {
+//   &:before,
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     background-color: $black;
+//     top: 95px;
+//     width: 15%;
+//     height: 5px;
+//   }
+//   &::before {
+//     right: 50%;
+//   }
+//   &::after {
+//     left: 50%;
+//   }
+// }
 .onload.fade-onload {
   opacity: 1;
 }
@@ -318,7 +317,7 @@ body {
     align-self: flex-start;
     height: max-content;
     border-left: 20px solid $blue;
-    padding: 5px 20px;
+    padding: 0px 20px;
     & h1 {
       text-transform: capitalize;
       font-weight: 500;
@@ -375,7 +374,7 @@ body {
     color: $blue;
     text-transform: capitalize;
     font-size: 0.8rem;
-    text-align: center;
+    // text-align: center;
     margin-top: 50px;
     white-space: nowrap;
     & .btn {
@@ -512,9 +511,10 @@ body {
 // footer
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // grid-gap: 1.5rem;
+  padding: 3rem 4rem;
   background-color: $blue;
   color: $white;
   & h3 {
@@ -525,145 +525,75 @@ body {
     font-weight: 400;
     font-size: 0.9rem;
     padding: 10px 0 40px 0;
-    opacity: 0.8;
   }
-  &__form-section {
-    width: 50%;
-    & .form-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: flex-start;
+  &__shop-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    & .btn {
+      @include btn-white;
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      width: 100%;
+      margin-top: 30px;
     }
   }
-  & .btn {
-    @include btn-white;
-    display: block;
-    text-align: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    width: 100%;
-    margin-top: 30px;
-  }
-  &__extra-info {
-    height: 100%;
-    justify-content: flex-start;
-    & h4 {
-      padding-bottom: 20px;
-    }
-    &__sitemap-info {
-      padding: 40px 0;
-      & h3 {
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        font-weight: 500;
-        padding: 10px 0;
-        letter-spacing: 0.1em;
-      }
-      &__links {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        font-weight: 300;
-        opacity: 0.9;
-        & ul {
-          align-self: flex-start;
-          margin-right: 30px;
-        }
-        & ul li a {
-          display: inline-block;
-          padding: 3px 0;
-          transition: transform 0.2s ease;
-          &:hover {
-            opacity: 0.8;
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-  }
-  &__extra-info-btn.btn {
-    margin: 0;
-  }
-}
-// form styling
-// .form-inputs {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: flex-start;
-//   &__contact-info {
-//     width: 100%;
-//     &__name {
-//       padding-right: 15px;
-//     }
-//     &__email {
-//       width: 60%;
-//     }
-//     & > * {
-//       display: flex;
-//       flex-direction: column;
-//       & label {
-//         text-transform: uppercase;
-//         font-size: 0.8rem;
-//         padding-bottom: 10px;
-//       }
-//       & input {
-//         padding-left: 5px;
-//         height: 40px;
-//         font-size: 0.9rem;
-//         font-family: $main-font;
-//         font-weight: bold;
-//       }
-//     }
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-//   &__textarea {
-//     min-width: 100%;
-//     max-width: 100%;
-//     min-height: 100px;
-//     width: 100%;
-//     height: 150px;
-//     padding: 5px;
-//     font-size: 0.9rem;
-//     font-family: $main-font;
-//     font-weight: bold;
-//   }
-//   &__textarea-label {
-//     text-transform: uppercase;
-//     font-size: 0.8rem;
-//     padding: 20px 0 10px 0;
-//   }
-// }
-@keyframes chevron {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-5px);
-  }
-}
-.copyright-section {
-  border-top: 1px solid $silver;
+  &__navlinks-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
+    & li a {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+    & a:hover {
+      color: #b3b3b3;
+    }
+  }
+  &__socials-container {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    // opacity: .7;
+    & .fab {
+      opacity: 0.7;
+    }
+    & .fab:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+.copyright-container {
+  border-top: 1px solid $silver;
+  padding: 0.8rem 4rem;
   color: $white;
   background-color: $blue;
   display: flex;
   justify-content: space-between;
-  padding: 8px 150px;
-  & > * {
-    opacity: 0.5;
+  & small,
+  a {
+    opacity: 0.8;
   }
   &__chevron {
-    &:hover .fa-chevron-up,
-    &:focus .fa-chevron-up {
-      animation-name: chevron;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-    }
+    font-size: 0.9rem;
+  }
+  & .fas {
+    transition: 0.2s ease;
+  }
+  &__chevron:hover .fas {
+    transform: translateY(-4px);
   }
 }
 
@@ -718,7 +648,7 @@ h2.faq-header {
   padding: 50px 0 80px;
   color: $black;
 
-  @include big_underline;
+  // @include big_underline;
 }
 
 .faq-container {
@@ -798,7 +728,7 @@ h2.faq-header {
   padding-top: 150px;
   padding-bottom: 30px;
   text-align: center;
-  @include big_underline;
+  // @include big_underline;
   &::before,
   &::after {
     top: 196px;
