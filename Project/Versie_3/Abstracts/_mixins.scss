@@ -1,0 +1,102 @@
+@use './variables' as *;
+
+@mixin btn-blue {
+  font-weight: 400;
+  font-size: 1rem;
+  color: $white;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border: 2px solid $blue;
+  background-color: $blue;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  &:hover {
+    background-color: $white;
+    color: $blue;
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+@mixin btn-white {
+  font-weight: 400;
+  font-size: 1rem;
+  color: $blue;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border: 2px solid $white;
+  background-color: $white;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  &:hover {
+    background-color: $blue;
+    color: $white;
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+@mixin fade-onscroll {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(20px);
+}
+@mixin fade-onload {
+  opacity: 0;
+  transition: opacity $transition-speed ease;
+}
+@mixin fade-navbar {
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: all 1.3s ease-out 0.3s;
+}
+
+@mixin underline-header {
+  &::after {
+    position: absolute;
+    background: $blue;
+    content: "";
+    height: 6px;
+    left: 50%;
+    bottom: -6px;
+    width: 50%;
+    // opacity: 0.7;
+    z-index: 5;
+  }
+  &::before {
+    position: absolute;
+    background: $blue;
+    content: "";
+    height: 6px;
+    right: 50%;
+    bottom: -6px;
+    width: 50%;
+    // opacity: 0.7;
+    z-index: 5;
+  }
+}
+
+@mixin header-banner {
+  padding: 12rem 4rem 7rem;
+  background-color: $blue;
+  font-size: calc(0.5rem + 1vw);
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 15px solid $grey;
+  margin-bottom: 3.5rem;
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+    width: max-content;
+    position: relative;
+  }
+}
+@mixin container {
+  margin: 0rem 4rem 3rem;
+  padding: 2rem 2rem;
+}

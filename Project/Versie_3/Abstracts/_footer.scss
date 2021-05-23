@@ -1,0 +1,90 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.footer {
+  border-top: 15px solid $grey;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 4rem;
+  background-color: $blue;
+  color: $white;
+  & h3 {
+    font-weight: 400;
+    font-size: 1.7rem;
+  }
+  & h4 {
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 10px 0 40px 0;
+  }
+  &__shop-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    & .btn {
+      @include btn-white;
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  &__navlinks-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    & ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      row-gap: 2rem;
+      column-gap: 1rem;
+    }
+
+    & a:hover {
+      color: #b3b3b3;
+    }
+  }
+  &__socials-container {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    // opacity: .7;
+    & .fab {
+      opacity: 0.7;
+    }
+    & .fab:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+.copyright-container {
+  border-top: 1px solid $silver;
+  padding: 0.8rem 4rem;
+  color: $white;
+  background-color: $blue;
+  display: flex;
+  justify-content: space-between;
+  & small,
+  a {
+    opacity: 0.8;
+  }
+  &__chevron {
+    font-size: 0.9rem;
+  }
+  & .fas {
+    transition: 0.2s ease;
+  }
+  &__chevron:hover .fas {
+    transform: translateY(-4px);
+  }
+}

@@ -2,27 +2,34 @@
   #body {
     font-size: 0.8rem;
   }
+
   .navbar__logo {
     font-size: 1rem;
   }
+
   .navbar {
     padding: 10px 10px;
   }
+
   .toggle-menu.fa-bars {
     font-size: 1.3rem;
     right: 10px;
   }
+
   a.nav-shop-btn.btn {
     font-size: 0.6rem;
     right: 40px;
     top: 9px;
   }
+
   .nav-link {
     font-size: 0.8rem;
   }
+
   .navbar__links.menu-open {
     height: 230px;
   }
+
   .hero-banner__left-bg h1 {
     font-size: 1.7rem;
   }
@@ -33,6 +40,7 @@
     font-size: 0.7rem;
     margin: 0 0;
   }
+
   .how-it-grows-container h1 {
     font-size: 1.2rem;
     width: 90%;
@@ -49,18 +57,16 @@
     font-size: 0.8rem;
     width: 90%;
   }
+
   .phase-three__guide-text h2 {
     font-size: 0.8rem;
   }
+
   .footer__extra-info__sitemap-info__links {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   h2.faq-header {
     padding: 30px;
     font-size: 1rem;
@@ -68,6 +74,7 @@
   h2.faq-header::before, h2.faq-header::after {
     display: none;
   }
+
   .faq-container {
     padding: 5px;
     width: 95%;
@@ -83,20 +90,21 @@
   .faq-container p {
     font-size: 0.8rem;
   }
+
   .modal-background-arrow {
     font-size: 2rem;
   }
+
   .fa-chevron-right {
-    -webkit-transform: translateX(-30px);
-            transform: translateX(-30px);
+    transform: translateX(-30px);
   }
+
   .fa-chevron-left {
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
+    transform: translateX(30px);
   }
+
   .fa-times {
     top: 5px;
     font-size: 1.5rem;
   }
-}
-/*# sourceMappingURL=460px_screen.css.map */
+}/*# sourceMappingURL=460px_screen.css.map */

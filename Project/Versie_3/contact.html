@@ -44,6 +44,8 @@
 
     <link defer rel="stylesheet" href="./reset.css" />
     <link media="screen" rel="stylesheet" href="./style.css" />
+    <link media="screen" rel="stylesheet" href="./contact.css" />
+
     <link rel="stylesheet" href="./Media_Queries/1140px_screen.css" />
     <link rel="stylesheet" href="./Media_Queries/890px_screen.css" />
 
@@ -96,89 +98,113 @@
         </ul>
       </nav>
     </nav>
-    <main>CONTACT</main>
-    <!-- 8. ===================FOOTER======================== -->
-    <footer class="footer">
-      <div class="footer__form-section">
-        <header class="form-header">
-          <h3>Contact Me</h3>
-          <h4>Do you have any questions ? Please let us know !</h4>
-        </header>
+    <!-- 7. ===================MAIN======================== -->
 
-        <form class="form-inputs" onsubmit="return false">
-          <div class="form-inputs__contact-info">
-            <div class="form-inputs__contact-info__name">
-              <label for="inputname">Name </label>
-              <input
-                type="text"
-                id="inputname"
-                name="inputname"
-                required
-                placeholder="What is your name?"
-              />
-            </div>
+    <main>
+      <header class="contact-banner">
+        <h1 class="onload"><i class="far fa-envelope"></i>get in touch</h1>
+      </header>
+      <!-- 8. ===================CONTACT FORM======================== -->
 
-            <div class="form-inputs__contact-info__email">
-              <label for="inputemail">Email </label>
-              <input
-                type="email"
-                id="inputemail"
-                name="inputemail"
-                required
-                placeholder="What is your e-mail?"
-              />
-            </div>
-          </div>
+      <div class="contact-container">
+        <div class="contact-container__header">
+          <h1>Have any questions?</h1>
+          <p>Please let me know !</p>
+        </div>
 
-          <label class="form-inputs__textarea-label" for="textarea"
-            >Your question</label
-          >
+        <form class="contact-container__contact-form">
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            required
+            placeholder="First Name"
+          />
+
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            required
+            placeholder="Last Name"
+          />
+
+          <input type="email" name="email" id="email" placeholder="Email" />
+
           <textarea
-            class="form-inputs__textarea"
+            class="textarea"
             name="textarea"
             id="textarea"
+            placeholder="Your question..."
           ></textarea>
-          <input type="submit" value="Send" class="form-submit-btn btn" />
-        </form>
-      </div>
 
-      <section class="footer__extra-info">
-        <div class="footer__extra-info shop-info">
-          <h3>Grow Your Own Reishi</h3>
-          <h4>
-            Interested in growing your own reishi? Visit our partner’s shop and
-            order one!
-          </h4>
-          <a
-            class="footer__extra-info-btn btn"
-            href="https://groenetakken.nl/product/reishi/"
-            target="_blank"
-            rel="noopener"
-            rel="noreferrer"
-            >Go To Shop</a
-          >
-        </div>
-        <div class="footer__extra-info__sitemap-info">
-          <h3>mushroomfruit</h3>
-          <nav class="footer__extra-info__sitemap-info__links">
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="#">How It Grows</a></li>
-              <li><a href="#">Consuming Reishi</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </section>
+          <input type="submit" value="Submit" class="submit-btn btn" />
+        </form>
+
+        <section class="contact-container__socials-container">
+          <h1>Or check my social media</h1>
+
+          <section class="contact-container-socials">
+            <div class="contact-container-socials__container">
+              <a target="_blank" href="https://nl-nl.facebook.com/"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <p>social link</p>
+            </div>
+
+            <div class="contact-container-socials__container">
+              <a target="_blank" href="https://twitter.com/"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+              <p>social link</p>
+            </div>
+
+            <div class="contact-container-socials__container">
+              <a target="_blank" href="https://www.instagram.com/">
+                <i class="fab fa-instagram-square"></i
+              ></a>
+              <p>social link</p>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <!-- 8. ===================FOOTER======================== -->
+
+    <footer class="footer">
+      <div class="footer__shop-container">
+        <h3>Grow Your Own Reishi</h3>
+        <h4>Visit my partner’s shop and order your own Reishi!</h4>
+        <a
+          class="footer__shop-container btn"
+          href="https://groenetakken.nl/product/reishi/"
+          target="_blank"
+          rel="noopener"
+          rel="noreferrer"
+          >Go To Shop</a
+        >
+      </div>
+      <nav class="footer__navlinks-container">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./how-it-grows.html">How It Grows</a></li>
+          <li><a href="./consuming-reishi.html">Consuming Reishi</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./about.html">About Me</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer__socials-container">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-instagram-square"></i>
+      </div>
     </footer>
-    <footer class="copyright-section">
+    <footer class="copyright-container">
       <small>© 2021 MushroomFruit. All rights reserved.</small>
-      <a href="#" class="copyright-section__chevron"
+      <a href="#" class="copyright-container__chevron"
         ><span><i class="fas fa-chevron-up"></i></span> Back to top</a
       >
     </footer>
