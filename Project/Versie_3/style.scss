@@ -332,7 +332,7 @@ body {
   }
 }
 
-// gallery
+// gallery in index.html
 .gallery {
   padding: 80px 0;
   display: flex;
@@ -385,14 +385,11 @@ body {
 
 // footer
 
-
-
 // ======================FAQ====================
 
 .faq-banner {
   @include header-banner;
 
- 
   & h1 i {
     position: absolute;
     z-index: 0;
@@ -495,13 +492,30 @@ h2.faq-header {
 
 // =================Gallery===============
 
-.gallery-header {
+.gallery-banner {
   @include header-banner;
-
+  & h1 {
+    position: relative;
+  }
+  i {
+    position: absolute;
+    z-index: 0;
+    top: -100px;
+    left: -180px;
+    color: rgba(233, 233, 233, 0.4);
+    transform: rotateZ(350deg);
+    font-size: 15rem;
+  }
 }
 .gallery-container {
-  width: 80%;
-  margin: 50px auto;
+  @include container;
+  border-bottom: none;
+  // background-color: $red;
+  // margin: 0rem 4rem 3rem;
+  // padding: 2rem 2rem;
+  // padding: 1rem;
+  // width: 80%;
+  // margin: 1rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
@@ -511,7 +525,7 @@ h2.faq-header {
     height: 0;
     padding: 50% 0;
     position: relative;
-    box-shadow: 0px 2px 5px rgba(65, 65, 65, 0.664);
+    box-shadow: 4px 3px 8px rgba(65, 65, 65, 0.664);
   }
 
   &__img {

@@ -33,6 +33,10 @@
       href="./Assets/paddostoel_bruin_icoon.ico"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
     <script
       async
       src="https://kit.fontawesome.com/49b8217457.js"
@@ -80,7 +84,9 @@
 
     <!-- Gallery -->
     <main id="gallery-main">
-      <h1 class="gallery-header">Gallery</h1>
+      <header class="gallery-banner">
+        <h1 class="onload"><i class="bi bi-camera"></i>gallery</h1>
+      </header>
 
       <div class="gallery-container">
         <figure class="gallery-container__img-container">
@@ -258,8 +264,6 @@
             Beschrijving foto: foto5
           </figcaption>
         </figure>
-
-       
       </div>
       <!-- =========================MODAL=================== -->
       <div class="modal-background" id="modal-background">
@@ -271,7 +275,10 @@
             <img src="" alt="" id="modal-img" />
           </div>
 
-          <figcaption class="modal-content__figcaption" id="modal-content__figcaption">
+          <figcaption
+            class="modal-content__figcaption"
+            id="modal-content__figcaption"
+          >
             Beschrijving foto: Dit is een rode paddestoel met witte stippen
           </figcaption>
         </figure>
