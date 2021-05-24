@@ -50,6 +50,7 @@
       margin: 1rem 0;
       height: 3rem;
       padding: 0.5rem 0.5rem;
+      min-width: 400px;
     }
     & input::placeholder,
     textarea::placeholder {
@@ -119,6 +120,12 @@
     flex-direction: column;
     & p {
       margin-left: 0;
+    }
+    &__contact-form {
+      & input,
+      & textarea {
+        min-width: 230px;
+      }
     }
   }
   .contact-container-socials {

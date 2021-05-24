@@ -91,6 +91,7 @@
   margin: 1rem 0;
   height: 3rem;
   padding: 0.5rem 0.5rem;
+  min-width: 400px;
 }
 .contact-container__contact-form input::-moz-placeholder, .contact-container__contact-form textarea::-moz-placeholder {
   font-size: 0.8rem;
@@ -200,6 +201,9 @@
   }
   .contact-container p {
     margin-left: 0;
+  }
+  .contact-container__contact-form input, .contact-container__contact-form textarea {
+    min-width: 230px;
   }
 
   .contact-container-socials {

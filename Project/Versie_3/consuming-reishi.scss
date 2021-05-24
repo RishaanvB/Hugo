@@ -1,0 +1,79 @@
+@use './Abstracts/variables' as *;
+@use './Abstracts/mixins' as *;
+
+.consuming-reishi-banner {
+  @include header-banner;
+  & h1 {
+    word-spacing: 1rem;
+  }
+  i {
+    position: absolute;
+    z-index: 0;
+    top: -90px;
+    left: -100px;
+    color: rgba(233, 233, 233, 0.4);
+    transform: rotateZ(350deg);
+    font-size: 12rem;
+  }
+}
+.consuming-reishi-container {
+  @include container;
+  margin: 0rem auto 3rem;
+  padding: 3rem 6rem;
+  width: 70%;
+  & small {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  &__intro {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  & p::first-letter {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  & p {
+    line-height: 1.7rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  & h1 {
+    position: relative;
+    width: max-content;
+    text-transform: capitalize;
+    @include underline-header;
+    margin-bottom: 2rem;
+  }
+
+  &__img-section {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    &__img-container {
+      grid-column: 1/2;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__text {
+      grid-column: 2/3;
+      margin-bottom: 0rem !important;
+      margin-top: 0rem !important;
+    }
+  }
+  &__table-intro {
+    font-weight: 500;
+  }
+  &__table {
+    & img {
+      width: 100%;
+    }
+    & figcaption {
+      padding-left: 1rem;
+      padding-top: 1rem;
+    }
+  }
+}
