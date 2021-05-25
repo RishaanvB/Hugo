@@ -1,0 +1,19 @@
+Mushroom species,Common name,Immunity,Fatigue,Longevity,Antiviral,Antimicrobial,Cancer,Diabetes,Microbiome,Brain,Skin,SARS_CoV_2,Total
+Ganoderma lucidum,Reishi,239,12,46,78,199,487,88,32,62,39,1,1283
+Cordyceps sinensis,Caterpillar fungus,170,26,11,52,357,266,84,18,42,21,3,1050
+Pleurotus ostreatus,Oyster mushroom,105,0,5,50,275,155,45,28,21,35,0,719
+Coriolus versicolor,Turkey tail,91,6,2,85,234,165,7,11,10,4,0,615
+Lentinula edodes,Shiitake,112,2,2,31,91,103,13,12,5,35,2,408
+Agaricus bisporus,Button mushroom,45,0,5,13,108,103,7,22,8,29,0,340
+Grifola frondosa,Maitake,85,2,1,26,37,117,37,11,15,6,1,338
+Agaricus blazei,Almond mushroom,67,3,2,20,42,106,14,2,9,3,1,269
+Inonotus obliquus,Chaga,24,2,0,24,39,73,27,2,4,6,3,204
+Hericium erinaceus,Lions mane,33,2,3,8,29,43,7,8,35,3,1,172
+Flammulina velutipes,Enokitake,32,0,1,20,46,34,3,7,2,5,0,150
+Pleurotus eryngii,King oyster ,21,0,1,7,38,18,4,8,6,5,0,108
+Coprinus comatus,Shaggy ink cap,4,0,0,16,39,18,9,1,2,5,0,94
+Boletus edulis,Porcini,2,0,0,1,9,13,0,1,0,7,0,33
+Cantharellus cibarius,Chanterelle,6,0,0,1,11,8,1,1,1,2,0,31
+Volvariella volvacea,Straw mushroom,5,0,0,2,8,9,1,1,1,0,0,27
+Tuber melanosporum,Black truffle,2,1,1,1,5,0,3,4,1,0,0,18
+Pholiota nameko,Nameko,3,0,0,1,4,5,0,0,0,0,0,13

@@ -112,6 +112,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #131313;
+  font-size: 1.1rem;
 }
 
 .navbar.navbar-animate-onload {
