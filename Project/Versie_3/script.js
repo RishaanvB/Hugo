@@ -17,11 +17,11 @@ window.addEventListener("scroll", () => {
 
   if (window.scrollY > 700) {
     navBar.style = "padding: 5px 30px";
-    shopBtn.style = "top: 8px";
+    // shopBtn.style = "top: 8px";
     toggleMenu.style = "top: 8px";
   } else if (window.scrollY < 500) {
     navBar.style = "padding: 20px 30px";
-    shopBtn.style = "top: 20px";
+    // shopBtn.style = "top: 20px";
     toggleMenu.style = "top: 20px";
   }
 });
@@ -37,8 +37,8 @@ fadeElements.forEach((element) => element.classList.add("fade-onload"));
 
 // handles animation on scroll for phase section images
 function animateImagesOnDisplay() {
-  const scrollTrigger = (window.innerHeight / 100) * 99;
   const elToFadeIn = document.querySelectorAll(".fade-in");
+  const scrollTrigger = (window.innerHeight / 100) * 99;
   elToFadeIn.forEach((elToFadeIn) => {
     const topOfEl = elToFadeIn.getBoundingClientRect().top;
     topOfEl < scrollTrigger
@@ -124,3 +124,52 @@ const showModal = (e) => {
   chevronLeft.addEventListener("click", getPreviousImage);
 };
 galleryImages.forEach((image) => image.addEventListener("click", showModal));
+
+// handles fading out for sections on how-it-grows.html
+
+const changePosTop = () => {
+  const element = document.getElementById("fader1");
+  const nextSibling = document.getElementById("fader2")
+  const scrollbar = window.scrollY;
+  const elementBottom = element.getBoundingClientRect().bottom;
+  const nextSiblingTop = nextSibling.getBoundingClientRect().top;
+  // console.log(elementBottom, "elementBottom");
+  // console.log(nextSiblingTop, "nextSiblingtop");
+  let distance = Math.floor(nextSiblingTop - elementBottom)
+  distance = ( distance)
+  console.log(distance);
+  // console.log(scrollbar, "scrollbar");
+  if (distance < 300) {
+    console.log("distance < 300");
+  } 
+  // nextSibling.style = "background-color: blue"
+
+  // const scrollbarTarget = 1600;
+  // let proximity = ((scrollbarTarget / scrollBar) * 100 / 100);
+
+  // let posTop;
+  // if(proximity)
+  // posTop = proximity + 30;
+  // console.log(window.scrollY, "scrolly");
+  // console.log(proximity, "prox");
+  // console.log(scrollBarY);
+  // let elTop = 30;
+  // let speed = 1.7
+
+  // elToFadeIn.style = `top:${elTop-=1}%`;
+
+  // elToFadeIn.forEach((sectionEl) => {
+  //   sectionEl.addEventListener("click", () => {
+  //     const nextSibling = sectionEl.parentNode.children[+1];
+  //     console.log("clicked");
+  //     console.log(nextSibling, "should be sesction");
+  //   });
+  // const topOfEl = el.getBoundingClientRect().top;
+  // console.log(topOfEl, "topofel");
+  // topOfEl < scrollTrigger
+  //   ? el.classList.add("fade-onscroll")
+  //   : el.classList.remove("fade-onscroll");
+  // });
+};
+
+// window.addEventListener("scroll", changePosTop);

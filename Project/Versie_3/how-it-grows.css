@@ -1,0 +1,98 @@
+main {
+  position: relative;
+}
+
+.how-it-grows-banner {
+  padding: 12rem 4rem 7rem;
+  background-color: #25455e;
+  font-size: calc(0.5rem + 1vw);
+  color: #f0f0f0;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 15px solid #cccccc;
+  margin-bottom: 3.5rem;
+}
+.how-it-grows-banner h1 {
+  text-align: center;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+.how-it-grows-banner h1 {
+  word-spacing: 1rem;
+}
+.how-it-grows-banner i {
+  position: absolute;
+  z-index: 0;
+  top: -100px;
+  left: -180px;
+  color: rgba(233, 233, 233, 0.4);
+  transform: rotateZ(350deg);
+  font-size: 15rem;
+}
+
+.how-it-grows-section-container {
+  margin: 0rem 4rem 3rem;
+  padding: 2rem 2rem;
+  background-color: #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(15, 300px);
+  margin-bottom: 3.5rem;
+  grid-auto-rows: 50px;
+  background-image: url("https://images.pexels.com/photos/7952965/pexels-photo-7952965.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center center;
+}
+@media (max-width: 890px) {
+  .how-it-grows-section-container {
+    margin: 0rem 1rem 3rem;
+  }
+}
+
+.fader-container {
+  position: relative;
+}
+.fader-container .faders {
+  position: sticky;
+  padding: 1rem 2rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 4px 4px 5px 2px #4c4c4c21;
+  border-left: 10px solid #25455e;
+  background-color: white;
+}
+.fader-container h1 {
+  margin-bottom: 1rem;
+}
+.fader-container p {
+  line-height: 1.7rem;
+}
+
+.fader-container:nth-child(1) {
+  grid-row: 2/span 4;
+  grid-column: 2/span 4;
+}
+.fader-container:nth-child(1) .faders {
+  top: 250px;
+}
+
+.fader-container:nth-child(2) {
+  grid-row: 6/span 4;
+  grid-column: 8/span 4;
+}
+.fader-container:nth-child(2) .faders {
+  top: 350px;
+}
+
+.fader-container:nth-child(3) {
+  grid-row: 10/span 5;
+  grid-column: 2/span 4;
+}
+.fader-container:nth-child(3) .faders {
+  top: 350px;
+}/*# sourceMappingURL=how-it-grows.css.map */

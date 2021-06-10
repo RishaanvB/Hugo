@@ -1,0 +1,75 @@
+@use './Abstracts/variables' as *;
+@use './Abstracts/mixins' as *;
+
+main {
+  position: relative;
+}
+.how-it-grows-banner {
+  @include header-banner;
+  & h1 {
+    word-spacing: 1rem;
+  }
+  i {
+    position: absolute;
+    z-index: 0;
+    top: -100px;
+    left: -180px;
+    color: rgba(233, 233, 233, 0.4);
+    transform: rotateZ(350deg);
+    font-size: 15rem;
+  }
+}
+
+.how-it-grows-section-container {
+  @include container;
+  // position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(15, 300px);
+  margin-bottom: 3.5rem;
+  grid-auto-rows: 50px;
+  background-image: url("https://images.pexels.com/photos/7952965/pexels-photo-7952965.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center center;
+}
+.fader-container {
+  position: relative;
+  & .faders {
+    position: sticky;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 5px 2px #4c4c4c21;
+    border-left: 10px solid $blue;
+    background-color: white;
+  }
+  & h1 {
+    margin-bottom: 1rem;
+  }
+  & p {
+    line-height: 1.7rem;
+  }
+}
+
+.fader-container:nth-child(1) {
+  grid-row: 2 / span 4;
+  grid-column: 2 / span 4;
+  & .faders {
+    top: 250px;
+  }
+}
+.fader-container:nth-child(2) {
+  grid-row: 6 / span 4;
+  grid-column: 8 / span 4;
+  & .faders {
+    top: 350px;
+  }
+}
+.fader-container:nth-child(3) {
+  grid-row: 10 / span 5;
+  grid-column: 2 / span 4;
+  & .faders {
+    top: 350px;
+  }
+}
