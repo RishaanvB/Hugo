@@ -83,8 +83,10 @@
     opacity: 0.9;
   }
   &__table {
+    overflow: auto;
+
     & img {
-      width: 100%;
+      min-width: 960px;
     }
     & figcaption {
       padding-left: 1rem;

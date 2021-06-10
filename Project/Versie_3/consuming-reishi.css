@@ -115,8 +115,11 @@
   font-style: italic;
   opacity: 0.9;
 }
+.consuming-reishi-container__table {
+  overflow: auto;
+}
 .consuming-reishi-container__table img {
-  width: 100%;
+  min-width: 960px;
 }
 .consuming-reishi-container__table figcaption {
   padding-left: 1rem;
