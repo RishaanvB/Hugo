@@ -1,5 +1,5 @@
 .about-banner {
-  padding: 12rem 4rem 7rem;
+  padding: 14rem 4rem 7rem;
   background-color: #25455e;
   font-size: calc(0.5rem + 1vw);
   color: #f0f0f0;
@@ -40,7 +40,7 @@
 }
 @media (max-width: 890px) {
   .about-container {
-    margin: 0rem 1rem 3rem;
+    margin: 0rem auto 3rem;
   }
 }
 .about-container__profile {

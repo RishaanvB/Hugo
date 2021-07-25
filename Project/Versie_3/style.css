@@ -603,7 +603,7 @@ body {
 }
 
 .faq-banner {
-  padding: 12rem 4rem 7rem;
+  padding: 14rem 4rem 7rem;
   background-color: #25455e;
   font-size: calc(0.5rem + 1vw);
   color: #f0f0f0;
@@ -712,7 +712,7 @@ h2.faq-header {
 }
 
 .gallery-banner {
-  padding: 12rem 4rem 7rem;
+  padding: 14rem 4rem 7rem;
   background-color: #25455e;
   font-size: calc(0.5rem + 1vw);
   color: #f0f0f0;
@@ -753,7 +753,7 @@ h2.faq-header {
 }
 @media (max-width: 890px) {
   .gallery-container {
-    margin: 0rem 1rem 3rem;
+    margin: 0rem auto 3rem;
   }
 }
 .gallery-container__img-container {
@@ -781,7 +781,7 @@ h2.faq-header {
   transform: scale(1.1);
 }
 
-#gallery-main {
+.gallery-main {
   position: relative;
 }
 

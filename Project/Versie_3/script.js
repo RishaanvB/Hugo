@@ -9,7 +9,7 @@ const galleryImages = document.querySelectorAll(
 const navbar = document.querySelector("#navbar");
 navbar.classList.add("navbar-animate-onload");
 
-// collapse navbar on specified scrollbar pos.
+// collapse navbar on specified scrollbar position.
 window.addEventListener("scroll", () => {
   const navBar = document.getElementById("navbar");
   const shopBtn = document.getElementById("nav-shop-btn");
@@ -129,19 +129,19 @@ galleryImages.forEach((image) => image.addEventListener("click", showModal));
 
 const changePosTop = () => {
   const element = document.getElementById("fader1");
-  const nextSibling = document.getElementById("fader2")
+  const nextSibling = document.getElementById("fader2");
   const scrollbar = window.scrollY;
   const elementBottom = element.getBoundingClientRect().bottom;
   const nextSiblingTop = nextSibling.getBoundingClientRect().top;
   // console.log(elementBottom, "elementBottom");
   // console.log(nextSiblingTop, "nextSiblingtop");
-  let distance = Math.floor(nextSiblingTop - elementBottom)
-  distance = ( distance)
+  let distance = Math.floor(nextSiblingTop - elementBottom);
+  distance = distance;
   console.log(distance);
   // console.log(scrollbar, "scrollbar");
   if (distance < 300) {
     console.log("distance < 300");
-  } 
+  }
   // nextSibling.style = "background-color: blue"
 
   // const scrollbarTarget = 1600;
@@ -173,3 +173,81 @@ const changePosTop = () => {
 };
 
 // window.addEventListener("scroll", changePosTop);
+
+// handles switches between img bg in how-it-grows.html
+
+const switchBackground = () => {
+  const scrollLimit =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollbar = window.scrollY;
+  const scrollbarPosition = (scrollbar / scrollLimit) * 100;
+
+  const firstBg = document.getElementById("first-bg");
+  const secondBg = document.getElementById("second-bg");
+  const thirdBg = document.getElementById("third-bg");
+
+  if (scrollbarPosition >= 0) {
+    firstBg.classList.add("active-bg");
+    secondBg.classList.remove("active-bg");
+    thirdBg.classList.remove("active-bg");
+  }
+  if (scrollbarPosition >= 30) {
+    secondBg.classList.add("active-bg");
+    firstBg.classList.remove("active-bg");
+    thirdBg.classList.remove("active-bg");
+  }
+  if (scrollbarPosition >= 60) {
+    thirdBg.classList.add("active-bg");
+    firstBg.classList.remove("active-bg");
+    secondBg.classList.remove("active-bg");
+  }
+};
+window.addEventListener("scroll", switchBackground);
+
+const mainEl = document.getElementById("main");
+const footerHTML = `
+<footer class="footer">
+<div class="footer__shop-container">
+  <h3>Grow Your Own Reishi</h3>
+  <h4>Visit my partner’s shop and order your own Reishi!</h4>
+  <a
+    class="footer__shop-container btn"
+    href="https://groenetakken.nl/product/reishi/"
+    target="_blank"
+    rel="noopener"
+    rel="noreferrer"
+    >Go To Shop</a
+  >
+</div>
+<nav class="footer__navlinks-container">
+  <ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./how-it-grows.html">How It Grows</a></li>
+    <li><a href="./consuming-reishi.html">Consuming Reishi</a></li>
+    <li><a href="./faq.html">FAQ</a></li>
+    <li><a href="./gallery.html">Gallery</a></li>
+    <li><a href="./about.html">About Me</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="footer__socials-container">
+  <a target="_blank" href="https://nl-nl.facebook.com/"
+    ><i class="fab fa-facebook-square"></i
+  ></a>
+  <a target="_blank" href="https://twitter.com/"
+    ><i class="fab fa-twitter-square"></i
+  ></a>
+  <a target="_blank" href="https://www.instagram.com/">
+    <i class="fab fa-instagram-square"></i
+  ></a>
+</div>
+</footer>
+<footer class="copyright-container">
+<small>© 2021 MushroomFruit. All rights reserved.</small>
+<a href="#" class="copyright-container__chevron"
+  ><span><i class="fas fa-chevron-up"></i></span> Back to top</a
+>
+</footer>`;
+
+mainEl.insertAdjacentHTML("afterend", footerHTML);

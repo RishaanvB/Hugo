@@ -81,7 +81,7 @@
 }
 
 @mixin header-banner {
-  padding: 12rem 4rem 7rem;
+  padding: 14rem 4rem 7rem;
   background-color: $blue;
   font-size: calc(0.5rem + 1vw);
   color: $white;
@@ -101,6 +101,6 @@
   padding: 2rem 2rem;
   background-color: $white;
   @media (max-width: 890px) {
-    margin: 0rem 1rem 3rem;
+    margin: 0rem auto 3rem;
   }
 }
