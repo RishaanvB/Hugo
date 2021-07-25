@@ -1,8 +1,12 @@
-@use './Abstracts/variables' as *;
-@use './Abstracts/mixins' as *;
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
 
 .about-banner {
   @include header-banner;
+  &::before {
+    background-image: url("../Assets/placeholder\ images/aboutmebg.jpg");
+    background-position: center;
+  }
   & h1 {
     word-spacing: 1rem;
   }

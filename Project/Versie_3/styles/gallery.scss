@@ -1,0 +1,145 @@
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+
+.gallery-banner {
+  @include header-banner;
+  &::before {
+    background-image: url("../Assets/placeholder\ images/gallerybg.jpg");
+  }
+  & h1 {
+    position: relative;
+  }
+  i {
+    position: absolute;
+    z-index: 0;
+    top: -100px;
+    left: -180px;
+    color: rgba(233, 233, 233, 0.4);
+    transform: rotateZ(350deg);
+    font-size: 15rem;
+  }
+}
+.gallery-container {
+  @include container;
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+  &__img-container {
+    overflow: hidden;
+    border-radius: 5px;
+    height: 0;
+    padding: 50% 0;
+    position: relative;
+    box-shadow: 4px 3px 8px rgba(65, 65, 65, 0.664);
+  }
+
+  &__img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    object-fit: cover;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
+.gallery-main {
+  position: relative;
+}
+@keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modal-zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modal-background {
+  position: fixed;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px) brightness(20%);
+  transition: all 1s ease;
+  animation-name: modal-opacity;
+  animation-duration: 0.5s;
+}
+
+.modal-background-arrow {
+  z-index: 999;
+  color: white;
+  font-size: 3rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    color: $grey;
+  }
+}
+.fa-chevron-right {
+  transform: translateX(-70px);
+}
+.fa-chevron-left {
+  transform: translateX(70px);
+}
+.fa-times {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  font-size: 2rem;
+  font-weight: 300;
+  color: $white;
+  &:active {
+    color: $grey;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.modal-content {
+  animation-name: modal-zoom;
+  animation-duration: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  &__img-container {
+    position: relative;
+    height: max-content;
+    width: 100%;
+    margin: 0 auto;
+    & img {
+      width: 100%;
+      height: auto;
+      max-height: 720px;
+      object-fit: contain;
+    }
+  }
+  &__figcaption {
+    color: $white;
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+  }
+}

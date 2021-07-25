@@ -3,7 +3,8 @@ main {
 }
 
 .how-it-grows-banner {
-  padding: 14rem 4rem 7rem;
+  position: relative;
+  padding: 16rem 4rem 8rem;
   background-color: #25455e;
   font-size: calc(0.5rem + 1vw);
   color: #f0f0f0;
@@ -11,6 +12,18 @@ main {
   text-transform: uppercase;
   border-bottom: 15px solid #cccccc;
   margin-bottom: 3.5rem;
+}
+.how-it-grows-banner::before {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%) blur(3px);
 }
 .how-it-grows-banner h1 {
   text-align: center;
@@ -20,6 +33,9 @@ main {
   width: max-content;
   position: relative;
 }
+.how-it-grows-banner::before {
+  background-image: url("../Assets/placeholder images/howitgrowsbannerbg.jpg");
+}
 .how-it-grows-banner h1 {
   word-spacing: 1rem;
 }
@@ -28,7 +44,7 @@ main {
   z-index: 0;
   top: -100px;
   left: -180px;
-  color: rgba(123, 175, 113, 0.4);
+  color: rgba(233, 233, 233, 0.4);
   transform: rotateZ(350deg);
   font-size: 15rem;
 }
@@ -67,15 +83,15 @@ main {
 }
 
 .first-bg {
-  background-image: url("./Assets/placeholder images/mushroombg-1.jpg ");
+  background-image: url("../Assets/placeholder images/mushroombg-1.jpg ");
 }
 
 .second-bg {
-  background-image: url("./Assets/placeholder images/mushroombg-2.jpg ");
+  background-image: url("../Assets/placeholder images/mushroombg-2.jpg ");
 }
 
 .third-bg {
-  background-image: url("./Assets/placeholder images/mushroombg-3.jpg ");
+  background-image: url("../Assets/placeholder images/mushroombg-3.jpg ");
 }
 
 .active-bg {

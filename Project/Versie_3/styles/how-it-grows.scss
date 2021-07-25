@@ -1,11 +1,15 @@
-@use './Abstracts/variables' as *;
-@use './Abstracts/mixins' as *;
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
 
 main {
   position: relative;
 }
 .how-it-grows-banner {
   @include header-banner;
+
+  &::before {
+    background-image: url("../Assets/placeholder\ images/howitgrowsbannerbg.jpg");
+  }
   & h1 {
     word-spacing: 1rem;
   }
@@ -14,7 +18,7 @@ main {
     z-index: 0;
     top: -100px;
     left: -180px;
-    color: rgb(123 175 113 / 40%);
+    color: rgba(233, 233, 233, 0.4);
     transform: rotateZ(350deg);
     font-size: 15rem;
   }
@@ -45,13 +49,13 @@ main {
   filter: brightness(70%);
 }
 .first-bg {
-  background-image: url("./Assets/placeholder\ images/mushroombg-1.jpg ");
+  background-image: url("../Assets/placeholder\ images/mushroombg-1.jpg ");
 }
 .second-bg {
-  background-image: url("./Assets/placeholder\ images/mushroombg-2.jpg ");
+  background-image: url("../Assets/placeholder\ images/mushroombg-2.jpg ");
 }
 .third-bg {
-  background-image: url("./Assets/placeholder\ images/mushroombg-3.jpg ");
+  background-image: url("../Assets/placeholder\ images/mushroombg-3.jpg ");
 }
 
 .active-bg {

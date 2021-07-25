@@ -5,23 +5,17 @@ const questions = document.querySelectorAll(".faq-container__aq-block ");
 const galleryImages = document.querySelectorAll(
   ".gallery-container__img-container"
 );
-// animates navbar into view
-const navbar = document.querySelector("#navbar");
-navbar.classList.add("navbar-animate-onload");
 
 // collapse navbar on specified scrollbar position.
 window.addEventListener("scroll", () => {
   const navBar = document.getElementById("navbar");
-  const shopBtn = document.getElementById("nav-shop-btn");
   const toggleMenu = document.querySelector(".toggle-menu");
 
   if (window.scrollY > 700) {
     navBar.style = "padding: 5px 30px";
-    // shopBtn.style = "top: 8px";
     toggleMenu.style = "top: 8px";
   } else if (window.scrollY < 500) {
     navBar.style = "padding: 20px 30px";
-    // shopBtn.style = "top: 20px";
     toggleMenu.style = "top: 20px";
   }
 });
@@ -133,46 +127,13 @@ const changePosTop = () => {
   const scrollbar = window.scrollY;
   const elementBottom = element.getBoundingClientRect().bottom;
   const nextSiblingTop = nextSibling.getBoundingClientRect().top;
-  // console.log(elementBottom, "elementBottom");
-  // console.log(nextSiblingTop, "nextSiblingtop");
   let distance = Math.floor(nextSiblingTop - elementBottom);
   distance = distance;
   console.log(distance);
-  // console.log(scrollbar, "scrollbar");
   if (distance < 300) {
     console.log("distance < 300");
   }
-  // nextSibling.style = "background-color: blue"
-
-  // const scrollbarTarget = 1600;
-  // let proximity = ((scrollbarTarget / scrollBar) * 100 / 100);
-
-  // let posTop;
-  // if(proximity)
-  // posTop = proximity + 30;
-  // console.log(window.scrollY, "scrolly");
-  // console.log(proximity, "prox");
-  // console.log(scrollBarY);
-  // let elTop = 30;
-  // let speed = 1.7
-
-  // elToFadeIn.style = `top:${elTop-=1}%`;
-
-  // elToFadeIn.forEach((sectionEl) => {
-  //   sectionEl.addEventListener("click", () => {
-  //     const nextSibling = sectionEl.parentNode.children[+1];
-  //     console.log("clicked");
-  //     console.log(nextSibling, "should be sesction");
-  //   });
-  // const topOfEl = el.getBoundingClientRect().top;
-  // console.log(topOfEl, "topofel");
-  // topOfEl < scrollTrigger
-  //   ? el.classList.add("fade-onscroll")
-  //   : el.classList.remove("fade-onscroll");
-  // });
 };
-
-// window.addEventListener("scroll", changePosTop);
 
 // handles switches between img bg in how-it-grows.html
 
@@ -197,7 +158,7 @@ const switchBackground = () => {
     firstBg.classList.remove("active-bg");
     thirdBg.classList.remove("active-bg");
   }
-  if (scrollbarPosition >= 60) {
+  if (scrollbarPosition >= 55) {
     thirdBg.classList.add("active-bg");
     firstBg.classList.remove("active-bg");
     secondBg.classList.remove("active-bg");
@@ -205,49 +166,4 @@ const switchBackground = () => {
 };
 window.addEventListener("scroll", switchBackground);
 
-const mainEl = document.getElementById("main");
-const footerHTML = `
-<footer class="footer">
-<div class="footer__shop-container">
-  <h3>Grow Your Own Reishi</h3>
-  <h4>Visit my partner’s shop and order your own Reishi!</h4>
-  <a
-    class="footer__shop-container btn"
-    href="https://groenetakken.nl/product/reishi/"
-    target="_blank"
-    rel="noopener"
-    rel="noreferrer"
-    >Go To Shop</a
-  >
-</div>
-<nav class="footer__navlinks-container">
-  <ul>
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="./how-it-grows.html">How It Grows</a></li>
-    <li><a href="./consuming-reishi.html">Consuming Reishi</a></li>
-    <li><a href="./faq.html">FAQ</a></li>
-    <li><a href="./gallery.html">Gallery</a></li>
-    <li><a href="./about.html">About Me</a></li>
-    <li><a href="./contact.html">Contact</a></li>
-  </ul>
-</nav>
-<div class="footer__socials-container">
-  <a target="_blank" href="https://nl-nl.facebook.com/"
-    ><i class="fab fa-facebook-square"></i
-  ></a>
-  <a target="_blank" href="https://twitter.com/"
-    ><i class="fab fa-twitter-square"></i
-  ></a>
-  <a target="_blank" href="https://www.instagram.com/">
-    <i class="fab fa-instagram-square"></i
-  ></a>
-</div>
-</footer>
-<footer class="copyright-container">
-<small>© 2021 MushroomFruit. All rights reserved.</small>
-<a href="#" class="copyright-container__chevron"
-  ><span><i class="fas fa-chevron-up"></i></span> Back to top</a
->
-</footer>`;
-
-mainEl.insertAdjacentHTML("afterend", footerHTML);
+console.log("end of script.js");

@@ -1,8 +1,11 @@
-@use './Abstracts/variables' as *;
-@use './Abstracts/mixins' as *;
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
 
 .consuming-reishi-banner {
   @include header-banner;
+  &::before {
+    background-image: url("../Assets/placeholder\ images/consumingreishibg.jpg");
+  }
   & h1 {
     word-spacing: 1rem;
   }
@@ -57,7 +60,6 @@
   }
   &__text {
     grid-column: 2/4;
- 
   }
 
   &__table-intro {

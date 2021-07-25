@@ -1,0 +1,300 @@
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+
+.hero-banner {
+  display: flex;
+  & > * {
+    height: 100vh;
+  }
+  &__left-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35vw;
+    background-color: $blue;
+    & h1 {
+      text-transform: uppercase;
+
+      margin-top: -60px;
+      color: $white;
+      font-size: 3.5rem;
+      padding: 1rem 30px 1rem 30px;
+      font-weight: 500;
+    }
+
+    & h2 {
+      font-family: $main-font;
+      color: $white;
+      font-weight: 100;
+      padding: 0.1rem 50px 1rem 30px;
+      line-height: 1.7em;
+      width: 80%;
+      font-size: 1.2rem;
+    }
+    & a {
+      @include btn-blue;
+      align-self: flex-start;
+      border: none;
+      border: 2px solid $brown;
+      background: $brown;
+      font-size: 1.2rem;
+      margin-top: 15px;
+      margin-left: 30px;
+      font-weight: 500;
+      color: $white;
+      transition: background-color 0.2s ease-in, color 0.2s ease-in,
+        opacity $transition-speed ease;
+
+      &:hover {
+        background: $white;
+        color: $brown;
+        cursor: pointer;
+      }
+    }
+  }
+  &__right-bg {
+    background-color: #ccd1d4;
+    width: 65vw;
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// <!-- ====HOW IT GROWS START==== -->
+
+.how-it-grows-container {
+  margin: 30px auto;
+  text-align: center;
+  padding: 80px 0;
+
+  & h1 {
+    // color: $black;
+    margin: 0 auto;
+    width: max-content;
+    // text-align: center;
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 500;
+    z-index: 10;
+    @include underline-header;
+  }
+  & p {
+    font-family: $secondary-font;
+    width: 30%;
+    margin: 20px auto;
+    line-height: 1.5rem;
+  }
+}
+
+// phase one how it grows
+
+.fade-in.fade-onscroll {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.phases {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 70px 20%;
+  margin: 0 auto;
+  &__text-header {
+    @include fade-onscroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    height: max-content;
+    border-left: 20px solid $blue;
+    padding: 0px 20px;
+    & h1 {
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+    & p {
+      font-family: $secondary-font;
+      width: 50%;
+      padding: 15px 0;
+      height: max-content;
+    }
+  }
+
+  &__img-container {
+    @include fade-onscroll;
+
+    overflow: hidden;
+    height: 0;
+    padding: 20% 20%;
+    position: relative;
+
+    & img {
+      display: block;
+      min-width: 150%;
+      min-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.phase-two {
+  color: $grey;
+  flex-direction: row-reverse;
+  background-color: $blue;
+  text-align: right;
+  & .phases__text-header {
+    border-left: none;
+    border-right: 20px solid $grey;
+    & p {
+      text-align: right;
+      margin-left: auto;
+    }
+  }
+}
+
+.phase-three {
+  background-color: $white;
+  &__guide-text {
+    @include fade-onscroll;
+    color: $blue;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    // text-align: center;
+    margin-top: 50px;
+    white-space: nowrap;
+    & .btn {
+      display: inline-block;
+      @include btn-blue;
+      margin-top: 15px;
+    }
+  }
+}
+// divider
+
+.divider {
+  height: 150px;
+  background: url("/Assets/placeholder images/image1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-top: 15px solid $grey;
+  border-bottom: 15px solid $grey;
+}
+
+// ================CONSUMING REISHI=================
+
+.benefits {
+  background-color: #dadada;
+  padding: 80px 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  &__header {
+    & h1 {
+      margin: 30px auto;
+      width: max-content;
+      position: relative;
+      z-index: 99;
+      text-transform: capitalize;
+      font-weight: 500;
+      @include underline-header;
+    }
+    & p {
+      padding: 10px 0;
+      color: $dark-grey;
+      font-family: $secondary-font;
+      max-width: 60%;
+
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  &__categories {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    & .fas {
+      color: $white;
+      font-size: 3.5rem;
+    }
+    & h2 {
+      padding: 20px 0;
+      font-family: $secondary-font;
+      color: $blue;
+      font-weight: 500;
+    }
+
+    & p {
+      color: $dark-grey;
+      font-family: $secondary-font;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  &__btn {
+    @include btn-blue;
+  }
+}
+
+.gallery {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 15px solid $grey;
+  border-bottom: 15px solid $grey;
+  &__header {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+    width: max-content;
+    position: relative;
+    z-index: 99;
+    text-transform: capitalize;
+    font-weight: 500;
+    @include underline-header;
+  }
+
+  &__btn {
+    @include btn-blue;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    grid-auto-flow: dense;
+    width: 90%;
+    margin: 40px auto;
+    & picture {
+      overflow: hidden;
+      height: 0;
+      padding: 50% 0;
+      position: relative;
+    }
+    & img {
+      min-width: 100%;
+      min-height: 100%;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.4s ease;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+@use '../Abstracts/navbar';
+@use '../Abstracts/footer';
+
+.onload.fade-onload {
+  opacity: 1;
+}
+
+.onload {
+  @include fade-onload;
+}
+body {
+  font-family: $main-font;
+  color: $black;
+  font-size: 1.1rem;
+}
+
+// =================Gallery===============

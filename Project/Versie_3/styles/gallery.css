@@ -1,0 +1,209 @@
+.gallery-banner {
+  position: relative;
+  padding: 16rem 4rem 8rem;
+  background-color: #25455e;
+  font-size: calc(0.5rem + 1vw);
+  color: #f0f0f0;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 15px solid #cccccc;
+  margin-bottom: 3.5rem;
+}
+.gallery-banner::before {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%) blur(3px);
+}
+.gallery-banner h1 {
+  text-align: center;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+.gallery-banner::before {
+  background-image: url("../Assets/placeholder images/gallerybg.jpg");
+}
+.gallery-banner h1 {
+  position: relative;
+}
+.gallery-banner i {
+  position: absolute;
+  z-index: 0;
+  top: -100px;
+  left: -180px;
+  color: rgba(233, 233, 233, 0.4);
+  transform: rotateZ(350deg);
+  font-size: 15rem;
+}
+
+.gallery-container {
+  margin: 0rem 4rem 3rem;
+  padding: 2rem 2rem;
+  background-color: #f0f0f0;
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+@media (max-width: 890px) {
+  .gallery-container {
+    margin: 0rem auto 3rem;
+  }
+}
+.gallery-container__img-container {
+  overflow: hidden;
+  border-radius: 5px;
+  height: 0;
+  padding: 50% 0;
+  position: relative;
+  box-shadow: 4px 3px 8px rgba(65, 65, 65, 0.664);
+}
+.gallery-container__img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-container__img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.gallery-main {
+  position: relative;
+}
+
+@-webkit-keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes modal-zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes modal-zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modal-background {
+  position: fixed;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px) brightness(20%);
+          backdrop-filter: blur(5px) brightness(20%);
+  transition: all 1s ease;
+  -webkit-animation-name: modal-opacity;
+          animation-name: modal-opacity;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.modal-background-arrow {
+  z-index: 999;
+  color: white;
+  font-size: 3rem;
+}
+.modal-background-arrow:hover {
+  cursor: pointer;
+}
+.modal-background-arrow:active {
+  color: #cccccc;
+}
+
+.fa-chevron-right {
+  transform: translateX(-70px);
+}
+
+.fa-chevron-left {
+  transform: translateX(70px);
+}
+
+.fa-times {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #f0f0f0;
+}
+.fa-times:active {
+  color: #cccccc;
+}
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.modal-content {
+  -webkit-animation-name: modal-zoom;
+          animation-name: modal-zoom;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.modal-content__img-container {
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  margin: 0 auto;
+}
+.modal-content__img-container img {
+  width: 100%;
+  height: auto;
+  max-height: 720px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.modal-content__figcaption {
+  color: #f0f0f0;
+  text-align: center;
+  width: 100%;
+  font-weight: 300;
+}/*# sourceMappingURL=gallery.css.map */

@@ -1,0 +1,105 @@
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+
+.faq-banner {
+  @include header-banner;
+  &::before {
+    background-image: url("../Assets/placeholder\ images/faqbg.jpg");
+  }
+
+  & h1 i {
+    position: absolute;
+    z-index: 0;
+    top: -100px;
+    left: -180px;
+    color: rgba(233, 233, 233, 0.4);
+    transform: rotateY(180deg);
+    font-size: 15rem;
+  }
+  & h1 i.comment-small {
+    font-size: 10rem;
+    top: -10px;
+    left: -240px;
+    color: #b4cbe0;
+    opacity: 0.4;
+    transform: rotateY(0);
+  }
+}
+
+h2.faq-header {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  padding: 50px 0 80px;
+  color: $black;
+
+  // @include big_underline;
+}
+
+.faq-container {
+  @include container;
+  color: $black;
+  display: grid;
+  box-shadow: 1px 5px 5px #7272727a;
+  grid-gap: 30px;
+  margin: 10px auto 70px;
+  padding: 60px 40px;
+  width: 70%;
+  text-align: center;
+  &__aq-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-left: 5px solid $blue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: left;
+    position: relative;
+    padding: 10px 10px;
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+    &.display-question {
+      background-color: white;
+      box-shadow: 1px 2px 5px rgba(41, 41, 41, 0.308);
+    }
+    &:hover {
+      cursor: pointer;
+      color: #17232c;
+      background-color: white;
+      box-shadow: 1px 2px 5px rgba(41, 41, 41, 0.308);
+    }
+  }
+
+  &__chevron {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    transition: transform 0.1s ease-in;
+
+    &.display-question {
+      transform: translateY(3px);
+      transform: rotateZ(180deg);
+    }
+  }
+  & h3 {
+    line-height: 1.5rem;
+    font-weight: 400;
+    margin-right: 30px;
+    max-width: 70%;
+    flex-basis: 100;
+  }
+  & .faq-answer {
+    display: none;
+    font-family: $secondary-font;
+    padding: 20px 10px;
+    max-width: 70%;
+    line-height: 1.5rem;
+    &__bold {
+      font-weight: 900;
+    }
+
+    &.display-question {
+      display: block;
+    }
+  }
+}
