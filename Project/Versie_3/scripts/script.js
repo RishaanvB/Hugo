@@ -166,4 +166,25 @@ const switchBackground = () => {
 };
 window.addEventListener("scroll", switchBackground);
 
-console.log("end of script.js");
+// handles switching between languages
+
+const switchLanguage = () => {
+  const langBtns = document.querySelectorAll(".langBtns");
+
+  const handleSwitch = (e) => {
+    e.preventDefault();
+    const currentLangID = e.target.id;
+    const pathName = location.href;
+    const langURL = pathName.split("/").at(-2);
+    if (currentLangID === "btnNL") {
+      const newURL = pathName.replace(langURL, "nl");
+      location.assign(newURL);
+    }
+    if (currentLangID === "btnEN") {
+      const newURL = pathName.replace(langURL, "en");
+      location.assign(newURL);
+    }
+  };
+  langBtns.forEach((btn) => btn.addEventListener("click", handleSwitch));
+};
+switchLanguage();

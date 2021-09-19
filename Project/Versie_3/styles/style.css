@@ -61,6 +61,20 @@
   color: #3f2627;
 }
 
+.lang-container {
+  display: inline-flex;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+.lang-container a {
+  padding: 5px 2px;
+  font-size: 0.9rem;
+}
+.lang-container a:hover {
+  font-weight: bold;
+}
+
 .footer {
   border-top: 15px solid #cccccc;
   display: grid;

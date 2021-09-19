@@ -6,7 +6,7 @@ const navigationHeaderHTML = `
       <a href="./index.html" class="navbar__logo">
         <div class="navbar__logo">
           <img
-            src="./Assets/logo.png"
+            src="../Assets/logo.png"
             alt="brand logo"
           />
         </div>
@@ -31,8 +31,13 @@ const navigationHeaderHTML = `
           <li class="nav-link"><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
-    </nav>
+      <div class="lang-container">
+        <a href="" class="langBtns" id="btnNL" >NL</a>
+        <a href="" class="langBtns" id="btnEN">EN</a>
+      </div>
+      </nav>
 `;
+
 
 const footerHTML = `
 <footer class="footer">
