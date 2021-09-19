@@ -6,16 +6,13 @@ const navigationHeaderHTML = `
       <a href="./index.html" class="navbar__logo">
         <div class="navbar__logo">
           <img
-            src="./Assets/paddestoel_final.ico"
+            src="./Assets/logo.png"
             alt="brand logo"
-            width="35px"
           />
-          <div class="navbar__logo-name">
-            <span>Mushroom</span>
-            <span>Fruit</span>
-          </div>
         </div>
       </a>
+            
+         
 
       <i class="fas fa-bars toggle-menu"></i>
 
